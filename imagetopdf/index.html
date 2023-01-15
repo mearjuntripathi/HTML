@@ -85,6 +85,7 @@
 
 
     function showImage() {
+        document.getElementById("message").innerHTML = "Your PDF is ready, Click <kbd>download</kbd> button to download it";
         var temp = document.getElementById("upload");
         temp.click();
         var oFReader = new FileReader();
