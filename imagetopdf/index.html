@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF</title>
+</head>
+
+<body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to PDF</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/74202760?v=4" />
+    </head>
+
+    <body class="d-flex
+                justify-content-center
+                align-items-center
+                vh-100">
+
+        <div class="w-400 p-5 shadow rounded">
+
+            <div class="d-flex
+                            justify-content-center
+                            align-items-center
+                            flex-column">
+
+                <h3 class="display-4 fs-1 
+                               text-center">
+                    IMAGE to PDF Converter
+                </h3>
+
+            </div>
+            <br>
+            <p class="text-center" id="message">
+                <b>
+                    Upload Your image
+                </b>
+            </p>
+            <div class="text-center">
+
+                <img src="JPG-to-PDF.png" class="w-50 img-thumbnail" id="picture" onclick="clickout();" />
+
+                <br>
+
+                <input type="file" id="upload" onchange="showImage();" style="display: none;" accept="image/*" />
+
+                <br>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary" onclick="clickout();">
+                UPLOAD
+            </button>
+
+            <button type="submit" class="btn btn-danger" style="float: right;" onclick="download();">
+                DOWNLOAD
+            </button>
+
+            </form>
+        </div>
+    </body>
+
+</html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
+<script type="text/javascript">
+
+    var upload = false;
+    var newImage, showImg;
+
+    function clickout() {
+        var temp = document.getElementById("upload");
+        temp.click();
+        upload = true;
+    }
+
+
+    function showImage() {
+        var temp = document.getElementById("upload");
+        temp.click();
+        var oFReader = new FileReader();
+        oFReader.readAsDataURL(document.getElementById("upload").files[0]);
+        oFReader.onload = function (oFREvent) {
+            document.getElementById("picture").src = oFREvent.target.result;
+            newImage = oFREvent.target.result;
+        };
+    };
+
+
+    function loadFile(event) {
+        showImg = document.getElementById('showImg');
+        showImg.src = URL.createObjectURL(event.target.files[0]);
+
+        newImage = document.createElement('img');
+        newImage.src = URL.createObjectURL(event.target.files[0]);
+
+        showImg.onload = function () {
+            URL.revokeObjectURL(showImg.src) // free memory
+        }
+    };
+
+    function download() {
+        if (upload == false) {
+            alert("Plese upload an Image For PDF");
+        }
+        else {
+            var temp = document.getElementById("upload");
+            temp = temp.files.item(0).name.split('.').slice(0, -1).join('.')
+            console.log(temp);
+            var doc = new jsPDF();
+            doc.addImage(newImage, 15, 40, 180, 180);
+            doc.save(temp+'.pdf');
+        }
+    }
+
+
+</script>
