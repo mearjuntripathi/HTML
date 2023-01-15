@@ -115,9 +115,9 @@
         else {
             var temp = document.getElementById("upload");
             temp = temp.files.item(0).name.split('.').slice(0, -1).join('.')
-            console.log(temp);
+            // console.log(temp);
             var doc = new jsPDF();
-            doc.addImage(newImage, 10, 15, 40, 180, 180);
+            doc.addImage(newImage,15, 40, 180, 180);
             doc.save(temp + '.pdf');
         }
     }
