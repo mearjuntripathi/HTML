@@ -1,6 +1,6 @@
 // Generate random room name if needed
 const roomHash = location
-  
+
 // TODO: Replace with your own channel ID
 //signin on SCALEDRONE
 //and use channel id and paste it frome there
@@ -14,13 +14,13 @@ const configuration = {
 };
 let room;
 let pc;
-  
-  
-function onSuccess() {};
+
+
+function onSuccess() { };
 function onError(error) {
   console.error(error);
 };
-  
+
 drone.on('open', error => {
   if (error) {
     return console.error(error);
@@ -40,7 +40,7 @@ drone.on('open', error => {
     startWebRTC(isOfferer);
   });
 });
-  
+
 // Send signaling data via Scaledrone
 function sendMessage(message) {
   drone.publish({
@@ -48,30 +48,30 @@ function sendMessage(message) {
     message
   });
 }
-  
+
 function startWebRTC(isOfferer) {
   pc = new RTCPeerConnection(configuration);
-  
+
   // 'onicecandidate' notifies us whenever an ICE agent needs to deliver a
   // message to the other peer through the signaling server
   pc.onicecandidate = event => {
     if (event.candidate) {
-      sendMessage({'candidate': event.candidate});
+      sendMessage({ 'candidate': event.candidate });
     }
   };
-  
+
   // If user is offerer let the 'negotiationneeded' event create the offer
   if (isOfferer) {
     pc.onnegotiationneeded = () => {
       pc.createOffer().then(localDescCreated).catch(onError);
     }
   }
-  
+
   // When a remote stream arrives display it in the #remoteVideo element
   pc.onaddstream = event => {
     remoteVideo.srcObject = event.stream;
   };
-  
+
   navigator.mediaDevices.getUserMedia({
     audio: true,
     video: true,
@@ -81,14 +81,14 @@ function startWebRTC(isOfferer) {
     // Add your stream to be sent to the conneting peer
     pc.addStream(stream);
   }, onError);
-  
+
   // Listen to signaling data from Scaledrone
   room.on('data', (message, client) => {
     // Message was sent by us
     if (client.id === drone.clientId) {
       return;
     }
-  
+
     if (message.sdp) {
       // This is called after receiving an offer or answer from another peer
       pc.setRemoteDescription(new RTCSessionDescription(message.sdp), () => {
@@ -105,11 +105,18 @@ function startWebRTC(isOfferer) {
     }
   });
 }
-  
+
 function localDescCreated(desc) {
   pc.setLocalDescription(
     desc,
-    () => sendMessage({'sdp': pc.localDescription}),
+    () => sendMessage({ 'sdp': pc.localDescription }),
     onError
   );
 }
+
+console.log("   _____                  __                   ___________          .__                      __    .__      .__ ");
+console.log("  /  _  \\   _______      |__|  __ __    ____   \\__    ___/ _______  |__| ______   _____    _/  |_  |  |__   |__|");
+console.log(" /  /_\\  \\  \\_  __ \\     |  | |  |  \\  /    \\    |    |    \\_  __ \\ |  | \\____ \\  \\__  \\   \\   __\\ |  |  \\  |  |");
+console.log("/    |    \\  |  | \\/     |  | |  |  / |   |  \\   |    |     |  | \\/ |  | |  |_> >  / __ \\_  |  |   |   Y  \\ |  |");
+console.log("\\____|__  /  |__|    /\\__|  | |____/  |___|  /   |____|     |__|    |__| |   __/  (____  /  |__|   |___|  / |__|");
+console.log("        \\/           \\______|              \\/                            |__|          \\/               \\/      ");
