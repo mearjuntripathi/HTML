@@ -135,3 +135,4 @@ function speakThis(message) {
 
     window.speechSynthesis.speak(speech);
 }
+
