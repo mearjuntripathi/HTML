@@ -1,4 +1,4 @@
-const btn = document.querySelector('.talk');
+const btn = document.querySelector('#talk');
 const content = document.querySelector('.content');
 
 function speak(sentence) {
@@ -22,17 +22,21 @@ function wishMe() {
         speak("Good noon Arjun");
     }
 
-    else if(hr > 12 && hr <= 17) {
+    else if(hr > 12 && hr < 16) {
         speak("Good Afternoon Arjun");
     }
 
-    else {
+    else if(hr >= 16 && hr < 20){
         speak("Good Evening Arjun");
+    }
+    
+    else{
+        speak("Good Night Arjun");
     }
 }
 
 window.addEventListener('load', ()=>{
-    speak("Activating Inertia");
+    speak("Hi, There I am DORA");
     speak("Going online");
     wishMe();
 })
