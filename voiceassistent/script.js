@@ -1,3 +1,9 @@
+window.addEventListener('load', ()=>{
+    speak("Hi, There I am DORA");
+    speak("Going online");
+    wishMe();
+});
+
 const btn = document.querySelector('#talk');
 const content = document.querySelector('.content');
 
@@ -35,11 +41,6 @@ function wishMe() {
     }
 }
 
-window.addEventListener('load', ()=>{
-    speak("Hi, There I am DORA");
-    speak("Going online");
-    wishMe();
-})
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -55,23 +56,26 @@ btn.addEventListener('click', ()=>{
     recognition.start();
 })
 
+
+
 function speakThis(message) {
+    
     const speech = new SpeechSynthesisUtterance();
 
     speech.text = "I did not understand what you said please try again";
 
     if(message.includes('hey') || message.includes('hello')) {
-        const finalText = "Hello Arjun";
+        const finalText = "Hello";
         speech.text = finalText;
     }
 
     else if(message.includes('how are you')) {
-        const finalText = "I am fine Arjun tell me how can i help you";
+        const finalText = "I am fine, tell me how can i help you";
         speech.text = finalText;
     }
 
     else if(message.includes('name')) {
-        const finalText = "My name is Inertia";
+        const finalText = "My name is DORA";
         speech.text = finalText;
     }
 
@@ -135,4 +139,3 @@ function speakThis(message) {
 
     window.speechSynthesis.speak(speech);
 }
-
