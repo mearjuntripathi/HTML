@@ -21,23 +21,23 @@ function wishMe() {
     var hr = day.getHours();
 
     if(hr >= 0 && hr < 12) {
-        speak("Good Morning Arjun");
+        speak("Good Morning ");
     }
 
     else if(hr == 12) {
-        speak("Good noon Arjun");
+        speak("Good noon ");
     }
 
     else if(hr > 12 && hr < 16) {
-        speak("Good Afternoon Arjun");
+        speak("Good Afternoon ");
     }
 
     else if(hr >= 16 && hr < 20){
-        speak("Good Evening Arjun");
+        speak("Good Evening ");
     }
     
     else{
-        speak("Good Night Arjun");
+        speak("Good Night ");
     }
 }
 
