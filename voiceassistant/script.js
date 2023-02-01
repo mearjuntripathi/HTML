@@ -81,7 +81,7 @@ recognition.addEventListener('result',(e)=>{
             writeAnswer("Hi, How I can Help you");
             content.innerHTML = '"Ask your question"';
         }
-        if(text.toLowerCase().includes("time")){
+        else if(text.toLowerCase().includes("time")){
             var hours = new Date().getHours();
             var minutes = new Date().getMinutes();
             var ampm = hours >= 12 ? 'PM' : 'AM';
@@ -94,7 +94,7 @@ recognition.addEventListener('result',(e)=>{
             writeAnswer(strTime);
             content.innerHTML = '"Ask your question"';
         }
-        if(text.toLowerCase().includes("date")){
+        else if(text.toLowerCase().includes("date")){
             let today = new Date().toISOString().slice(0, 10);
             today = "Today is "+today;
             speaks(today);
@@ -102,7 +102,7 @@ recognition.addEventListener('result',(e)=>{
             content.innerHTML = '"Ask your question"';
         }else{
             speaks("Sorry, I am not fully ready, I am in a development mode at this time");
-            writeAnswer("Sorry I am not fully ready, I am in a development mode at this time");
+            writeAnswer("Sorry, I am not fully ready, I am in a development mode at this time");
             content.innerHTML = '"Ask your question"';
         }
         // else{
