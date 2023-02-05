@@ -1,0 +1,62 @@
+body {
+    color: white;
+}
+
+#fixed{
+    position: sticky; top: 0;
+    /* width: 100%; */
+}
+
+section.resume-section {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    max-width: 75rem;
+}
+
+section {
+    min-height: 100vh;
+}
+
+.name {
+    font-size: 60px;
+}
+
+#container {
+    margin-right: 10px;
+    margin: 50px 0;
+}
+
+#text {
+    display: inline-block;
+    color: #ff0000;
+    border-right: 3px solid #ed0c14;
+    font-family: 'Courier New';
+
+}
+
+
+p {
+    color: #b8aaff;
+    font-family: Courier New;
+    font-size: 17px;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.social-icons .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+}
