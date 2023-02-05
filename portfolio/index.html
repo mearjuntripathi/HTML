@@ -2,317 +2,378 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Arjun Tripathi</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://avatars.githubusercontent.com/u/74202760?v=4" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
         type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="styles.css" rel="stylesheet" />
-
+    <script src="script.js"></script>
+    <title>Arjun Tripathi</title>
 </head>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Arjun Tripathi</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                    src="https://media.licdn.com/dms/image/D4D03AQGNl7fyqB7z3Q/profile-displayphoto-shrink_200_200/0/1672567126580?e=1678320000&v=beta&t=A2zQ_dsC_Bx6JBhaxGlEXSp0BdPXkr8Ifg8j3DgdpSA"
-                    alt="Arjun Tripathi" /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Project">Projects</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificate">Certificate</a></li>
-            </ul>
+<body style="background-color: #04030cf7; color: white;" onload="writeAnswer()">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow " id="fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex" href="#">
+                <i class="social-icon"><img class="rounded-circle" style="width:15%"
+                        src="https://avatars.githubusercontent.com/u/74202760?v=4" alt="AVATAR">
+                </i>
+            </a>
+            <div class="navbar-brand" style="margin-right: 20%; font-size: xx-large;">
+                Arjun <span class="text-info">Tripathi</span>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="form-white input-group" style="width: 250px;">
+                </div>
+                <ul class="navbar-nav ms-auto me-3">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skill">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#project">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificate">Certificate</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <!-- Page Content-->
+
+
     <div class="container-fluid p-0">
         <!-- About-->
         <section class="resume-section" id="about">
             <div class="resume-section-content">
-                <h1 class="mb-0">
+                <h1 class="name">
                     Arjun
                     <span class="text-primary">Tripathi</span>
                 </h1>
+                <div id="container">
+                    <h3>
+                        <div id="text"></div>
+                    </h3>
+                </div>
                 <div class="subheading mb-5">
-                    Varanasi · Utter Pradesh · India(221003) · (+91) 8887135297 ·
+                    Varanasi · Uttar Pradesh · India(221003) ·
+                    <a href="tel:+918887135297">(+91) 8887135297</a> ·
                     <a href="mailto:mearjuntripathi@gmail.com">mearjuntripathi@gmail.com</a>
                 </div>
-                <p class="lead mb-5">Hi I’m Arjun Tripathi I have just over a months of experience as a FullStack
-                    Developer.
-                    In my short time there, I've already contributed to a dozen projects.<br>
-                    I completed a one internship with backend developer, where I created a APIs for Netcore teams.
-                    Ideally, I would like to continue to specialize in Full Stack Development, because i intrested to
-                    work in this sector. </p>
+                <p class="lead mb-5">Hi, I’m Arjun Tripathi I have just over a month of experience as a
+                    FullStack Developer. <br> In my short time there, I've already contributed to a dozen projects. I
+                    completed one internship with a backend developer, where I created APIs for Netcore teams. Ideally,
+                    I
+                    would like to continue to specialize in Full Stack Development, because I am interested to work in
+                    this sector.</p>
                 <div class="social-icons">
                     <a class="social-icon" href="https://www.linkedin.com/in/mearjuntripathi/" target="_blank"><i
-                            class="fab fa-linkedin-in"></i></a>
+                            class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
                     <a class="social-icon" href="https://github.com/mearjuntripathi" target="_blank"><i
-                            class="fab fa-github"></i></a>
+                            class="fab fa-github fa-2x" style="color: #ffffff;"></i></a>
                     <a class="social-icon" href="https://twitter.com/mearjuntripathi" target="_blank"><i
-                            class="fab fa-twitter"></i></a>
+                            class="fab fa-twitter fa-2x" style="color: #55acee;"></i></a>
                     <a class="social-icon" href="https://www.instagram.com/mearjuntripathi/" target="_blank"><i
-                            class="fab fa-instagram"></i></a>
+                            class="fab fa-instagram fa-2x" style="color: #ff169e;"></i></a>
                     <a class="social-icon" href="https://www.hackerrank.com/mearjuntripathi/" target="_blank"><i
-                            class="fa-brands fa-hackerrank"></i></a>
+                            class="fa-brands fa-hackerrank fa-2x" style="color: #166f00;"></i></a>
                     <a class="social-icon" href="https://auth.geeksforgeeks.org/user/mearjuntripathi" target="_blank">
-                        <img style="width:35px;" 
-                        src="https://media.geeksforgeeks.org/wp-content/uploads/20200716222246/Path-219.png" 
-                        alt="GFG Logo"></a>
-                    <a class="social-icon" href="https://g.dev/mearjuntripathi" target="_blank"><i class="fa-brands fa-google"></i></a>
-                    <a class="social-icon" href="https://t.me/mearjuntripathi" target="_blank"><i class="fab fa-telegram"></i></a>
-                    </div>
+                        <img style="width:60px;"
+                            src="https://media.geeksforgeeks.org/wp-content/uploads/20200716222246/Path-219.png"
+                            alt="GFG Logo"></a>
+                    <a class="social-icon" href="https://g.dev/mearjuntripathi" target="_blank"><i
+                            class="fab fa-google fa-2x" style="color: #dd4b39;"></i></a>
+                    <a class="social-icon" href="https://t.me/mearjuntripathi" target="_blank"><i
+                            class="fab fa-telegram fa-2x" style="color: #0082ca;"></i></a>
+                    <a class="social-icon" href="https://stackoverflow.com/users/20118578/arjun-tripathi"
+                        target="_blank"><i class="fab fa-stack-overflow fa-2x" style="color: #ffac44;"></i>
+                    </a>
+                </div>
             </div>
         </section>
-
         <hr class="m-0" />
-        <!-- Experience-->
         <section class="resume-section" id="experience">
             <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
+                <h2 class="mb-5" style="color: #00a6ff;">EXPERIENCE</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Software Engineer Intern</h3>
-                        <div class="subheading mb-3">Rhizicube</div>
-                        <p>This is my first internship experience in backend Development.
-                            Here i learn how to attend meeting and behave with our seniour and HR,
-                            and I created a APIs for NETCORE teams for their Zapier integration and I also understand
-                            How to test APIs with POSTMAN and
-                            Thunder Client in VS code and with curl also. <br>
-                            Their i used a GO Language, JS, restAPI and gRPC to development a APIs in Production.
-                        </p>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">Software Engineer Intern</h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                                    font-size: larger; 
+                                    color:rgb(255, 222, 222);">Rhizicube</div>
+                        <p>This is my first internship experience in backend Development. Here I learn how to attend the
+                            meeting and behave with our seniors and HR, and I created APIs for NETCORE teams for their
+                            Zapier integration I also understand How to test APIs with POSTMAN and Thunder Client in VS
+                            code and with curl also. <br>
+                            There I used GO Language, JS, rest API, and gRPC to develop an API in Production.
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2022 - October 2022</span></div>
+                    <div class="flex-shrink-0"><span class="text-warning">July 2022 - October 2022</span></div>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">College Project Head</h3>
-                        <div class="subheading mb-3">Mahatma Gandhi Kashi Vidhyapeeth</div>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">College Project Head</h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                                    font-size: larger; 
+                                    color:rgb(255, 222, 222);">Mahatma Gandhi Kashi Vidhyapeeth</div>
                         <p>
-                            In my Bachelor last year in our major project I was a head of my team.
-                            We create a chatting website in my major project,
-                            and i lead whole team and I manage all things like creating documentation,
-                            frontent development, and backend development, but mainly worked on backend on that project.
-                            <br>
-                            WE use a PHP, JS, JQuery, CSS, HTML, and MySQL in our developmentof our chatting website and
-                            I also use a scaledrone to add facilty of videocall in our website.
+                            In my Bachelor's last year in our major project, I was the head of my team. We create a
+                            chatting website for my major project, and I lead the whole team I manage all things like
+                            creating documentation, frontend development, and backend development, but mainly worked on
+                            the backend on that project. <br>
+                            We use PHP, JS, JQuery, CSS, HTML, and MySQL in the development of our chatting website and
+                            I also use a scale drone to add the facility of video call to our website.
                         </p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">May 2022 - July 2022</span></div>
+                    <div class="flex-shrink-0 "><span class="text-warning">May 2022 - July 2022</span></div>
                 </div>
             </div>
         </section>
 
         <hr class="m-0" />
-        <!-- Education-->
+
         <section class="resume-section" id="education">
             <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
+                <h2 class="mb-5" style="color: #00a6ff;">EDUCATION</h2>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Dr. A.P.J. Abdul Kalam Technical University</h3>
-                        <div class="subheading mb-3">Master of Computer Application</div>
-                        <div>Computer Science - AI, Database</div>
-                        <p>Appearing...</p>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">Dr. A.P.J. Abdul Kalam Technical University
+                        </h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                        font-size: larger; 
+                        color:rgb(255, 222, 222);">Master of Computer Application</div>
+                        <p>Computer Science - AI, Database</p>
+                        <p style="color: #3af40c;">Appearing...</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">November 2022 - present</span></div>
+                    <div class="flex-shrink-0"><span class="text-warning">November 2022 - present</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Mahatma Gandhi Kashi Vidhyapeeth</h3>
-                        <div class="subheading mb-3">Bachelor of Computer Application</div>
-                        <div>Computer Science - Full Stack Development, JAVA Developer, C++ , C, PHP, and MySQL</div>
-                        <p>Result Status: 70.67</p>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">Mahatma Gandhi Kashi Vidhyapeeth</h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                        font-size: larger; 
+                        color:rgb(255, 222, 222);">Bachelor of Computer Application</div>
+                        <p>Computer Science - MySQL, JAVA Developer, C++ , C, PHP, DSA, and OOPs</p>
+                        <p style="color: #3af40c;">Percentage: 70.67</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">MAY 2019 - Novmber 2022</span></div>
+                    <div class="flex-shrink-0"><span class="text-warning">MAY 2019 - Novmber 2022</span></div>
                 </div>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Vikas Intermediate College</h3>
-                        <div class="subheading mb-3">Intermidiate</div>
-                        <p>Percentage: 63.7%</p>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">Vikas Intermediate College</h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                        font-size: larger; 
+                        color:rgb(255, 222, 222);">Intermidiate</div>
+                        <p>Phisics, Chemistry, Math, English, and Hindi</p>
+                        <p style="color: #3af40c;">Percentage: 63.7%</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2018 - May 2019</span></div>
+                    <div class="flex-shrink-0"><span class="text-warning">April 2018 - May 2019</span></div>
                 </div>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Vikas Intermediate College</h3>
-                        <div class="subheading mb-3">High School</div>
-                        <p>Percentage: 73.8%</p>
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);">Vikas Intermediate College</h3>
+                        <div class="subheading mb-3" style="font-family: roboto mono; 
+                        font-size: larger; 
+                        color:rgb(255, 222, 222);">High School</div>
+                        <p>Hindi, English, Math, Science, Social Science, and Drawing</p>
+                        <p style="color: #3af40c;">Percentage: 73.8%</p>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2016 - May 2017</span></div>
-                </div>
-            </div>
-        </section>
-
-        <hr class="m-0" />
-        <!-- Project-->
-        <section class="resume-section" id="Project">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Projects</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">chatting Website (CHATon)</h3>
-                        <div class="subheading mb-3">A realtime chatting Website</div>
-                        <div><code>PHP · CSS · JavaScript · HTML5 · CSS · JQuery · MySQL</code></div>
-                        <p>Our Major Project which provide a funcality which used to real time chat and video call facility<br>
-                        <b>For documentation </b><a href="https://drive.google.com/file/d/1yZ89-FOlpTBnWFvUOLTc_KjDv_wkU4yR/view?usp=share_link" 
-                                                    target="_blank"> click here</a><br>
-                        <b>For Code </b><a href="https://github.com/mearjuntripathi/PHP/tree/main/chat_on" target="_blank"> click here</a><br>
-                        <b>Live Website</b><a href="https://greatchatson.000webhostapp.com/" target="_blank"> click here</a></p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">MAY 2022 - July 2022</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Chat Room</h3>
-                        <div class="subheading mb-3">A group chat cli application</div>
-                        <div><code>JAVA · socket.IO</code></div>
-                        <p>My <code>JAVA</code> project on using <code>socket.io</code> to create a group chatting. 
-                            In which we create a server where all client connect and chat with other. <br>
-                            <b>For Code </b><a href="https://github.com/mearjuntripathi/Chat-Room" target="_blank"> click here</a><br>
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2022 - May 2022</span></div>
-                </div>
-
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Quiz Game</h3>
-                        <div class="subheading mb-3">A graphics based C Language Game</div>
-                        <div><code>C · Graphics · TurboC</code></div>
-                        <p>A Quiz Game which is created on C language in turboC editor with graphics functionality. <br>
-                            <b>For Code </b><a href="https://github.com/users/mearjuntripathi/projects/2" target="_blank"> click here</a><br>
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">April 2016 - May 2017</span></div>
+                    <div class="flex-shrink-0"><span class="text-warning">April 2016 - May 2017</span></div>
                 </div>
             </div>
         </section>
 
         <hr class="m-0" />
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
+
+        <section class="resume-section" id="skill">
             <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages & Tools</div>
+                <h2 class="mb-5" style="color: #00a6ff;">SKILL</h2>
+                <div class="subheading mb-3" style="font-family: roboto mono; 
+                            font-size: larger; 
+                            color:rgb(255, 222, 222);">
+                    Programming Languages & Tools
+                </div>
                 <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-cuttlefish"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-cuttlefish"></i>++</li>
-                    <li class="list-inline-item"><i class="fab fa-java"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-php"></i></li>
-                    <li class="list-inline-item"><i class="fa-solid fa-database"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-github"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-golang"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-cuttlefish fa-4x" style="color: #0082ca;"></i></li>
+                    <li class="list-inline-item"><img style="width:80px;"
+                            src="https://user-images.githubusercontent.com/42747200/46140125-da084900-c26d-11e8-8ea7-c45ae6306309.png"
+                            alt=""></li>
+                    <li class="list-inline-item"><i class="fab fa-java fa-4x" style="color: #de4156;"></i></li>
+                    <li class="list-inline-item"><i class="fa-brands fa-php fa-4x" style="color: #0019d6;"></i></li>
+                    <li class="list-inline-item"><i class="fa-solid fa-database fa-4x" style="color: white;"></i></li>
+                    <li class="list-inline-item"><i class="fa-brands fa-github fa-4x"></i></li>
+                    <li class="list-inline-item"><i class="fa-brands fa-golang fa-4x" style="color: #10abff;"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-html5 fa-4x" style="color: #ff5e00;"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-css3-alt fa-4x" style="color: #0072b0;"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-js-square fa-4x" style="color: #ecfc0b;"></i></li>
                     <!-- <li class="list-inline-item"><i class="fab fa-angular"></i></li> -->
                     <!-- <li class="list-inline-item"><i class="fab fa-react"></i></li> -->
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-node-js fa-4x" style="color: #00be06;"></i></li>
                     <!-- <li class="list-inline-item"><i class="fab fa-sass"></i></li> -->
                     <!-- <li class="list-inline-item"><i class="fab fa-less"></i></li> -->
                     <!-- <li class="list-inline-item"><i class="fab fa-wordpress"></i></li> -->
                     <!-- <li class="list-inline-item"><i class="fab fa-gulp"></i></li> -->
                     <!-- <li class="list-inline-item"><i class="fab fa-grunt"></i></li> -->
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                    <li class="list-inline-item"><i class="fa-brands fa-linux"></i></li>
+                    <li class="list-inline-item"><i class="fab fa-npm fa-4x" style="color: #e80800;"></i></li>
+                    <li class="list-inline-item"><img style="width:80px;"
+                            src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt=""></li>
                 </ul>
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
+                <div class="subheading mb-3" style="font-family: roboto mono; 
+                                                    font-size: larger; 
+                                                    color:rgb(255, 222, 222);">
+                    Workflow
+                </div>
+                <ul class="fa-ul mb-0" style="color:#03ff6c">
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        APIs creation with nodejs, java, GO, and C++.
+                        <p>APIs creation with nodejs, java, GO, and C++.</p>
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        APIs testing with POSTMAN and Thunder Client. 
+                        <p>APIs testing with POSTMAN and Thunder Client.</p>
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Backend Development || Full Stack Development
+                        <p>Backend Development || Full Stack Development</p>
                     </li>
                     <li>
                         <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Presentation, Documentation, and Prototype.
+                        <p>Presentation, Documentation, and Prototype.</p>
                     </li>
                 </ul>
             </div>
         </section>
         <hr class="m-0" />
-        <!-- Interests-->
-        <section class="resume-section" id="interests">
+        <section class="resume-section" id="project">
             <div class="resume-section-content">
-                <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a <code>Web Developer</code> and <code>Full Stack Developer</code>. I enjoy most of my time being outdoors.
-                    I'm an adventure, i like to travel and love to explore place and live and sapnt time with nature.
-                    I enjoy cycling, biking, free climbing, and kayaking.</p>
-                <p class="mb-2">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television
-                    shows, and video games.
-                    I spend a large amount of my free time exploring the latest technology advancements in the
-                    front-end web development world.</p>
-                <p>When I bore i listen music, rap, indipop, remix, genric music and dance on it and play with my pet.</p>
+                <h2 class="mb-5" style="color: #00a6ff;">PROJECTS</h2>
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-0" style="color: rgb(255, 88, 88);"">Chatting Website (CHATon)</h3>
+                        <div class=" subheading mb-3" style="font-family: roboto mono; 
+                                                            font-size: larger; 
+                                                            color:rgb(255, 222, 222);">
+                            A realtime chatting Website
+                    </div>
+                    <div><code>PHP · CSS · JavaScript · HTML5 · CSS · JQuery · MySQL</code></div>
+                    <p>Our Major Project which provide a funcality which used to real time chat and video call
+                        facility<br>
+                        <b>For documentation: </b><a
+                            href="https://drive.google.com/file/d/1yZ89-FOlpTBnWFvUOLTc_KjDv_wkU4yR/view?usp=share_link"
+                            target="_blank">click here</a><br>
+                        <b>For Code: </b><a href="https://github.com/mearjuntripathi/PHP/tree/main/chat_on"
+                            target="_blank">click here</a><br>
+                        <b>Live Website: </b><a href="https://greatchatson.000webhostapp.com/" target="_blank">click
+                            here</a>
+                    </p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-warning">MAY 2022 - July 2022</span></div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Awards-->
-        <section class="resume-section" id="certificate">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Fundamental of Digital Marketing - <b>Google Digital Unlocked</b> 
-                        <a href="https://learndigital.withgoogle.com/link/1tb5mplmosg"  target="_blank">click here</a>
-                        (Certificate id – 9L4JENAGA)
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Go Language - <b>Hackerrank</b> <a href="https://www.hackerrank.com/certificates/ad7f9b3ad2e1">click here</a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        PHP - <b>Sololearn</b> <a href="https://www.sololearn.com/Certificate/1059-26402984/pdf/">click here</a>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        5 <sup>th</sup> star in <code>C</code> and <code>C++</code> <br>
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        4 <sup>th</sup> star in <code>JAVA</code> 
-                    </li>
-                </ul>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0" style="color: rgb(255, 88, 88);">Chat Room</h3>
+                    <div class="subheading mb-3" style="font-family: roboto mono; 
+                                                            font-size: larger; 
+                                                            color:rgb(255, 222, 222);">
+                        A group chat cli application
+                    </div>
+                    <div><code>JAVA · socket.IO</code></div>
+                    <p>My <code>JAVA</code> project on using <code>socket.io</code> to create a group chatting.
+                        In which we create a server where all client connect and chat with other. <br>
+                        <b>For Code: </b><a href="https://github.com/mearjuntripathi/Chat-Room" target="_blank">
+                            click here</a><br>
+                    </p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-warning">April 2022 - May 2022</span></div>
             </div>
-        </section>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0" style="color: rgb(255, 88, 88);">Quiz Game</h3>
+                    <div class="subheading mb-3" style="font-family: roboto mono; 
+                                                            font-size: larger; 
+                                                            color:rgb(255, 222, 222);">
+                        A graphics based C Language Game
+                    </div>
+                    <div><code>C · Graphics · TurboC</code></div>
+                    <p>A Quiz Game which is created on C language in turboC editor with graphics functionality. <br>
+                        <b>For Code: </b><a href="https://github.com/users/mearjuntripathi/projects/2"
+                            target="_blank">click here</a><br>
+                    </p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-warning">April 2016 - May 2017</span></div>
+            </div>
     </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="scripts.js"></script>
+    </section>
+    <hr class="m-0" />
+    <section class="resume-section" id="interests">
+        <div class="resume-section-content">
+            <h2 class="mb-5" style="color: #00a6ff;">INTERESTS</h2>
+            <p>Apart from being a Web Developer and Full Stack Developer. I enjoy most of my time outdoors. I'm an
+                adventurer, I like to travel and love to explore places and live and spend time with nature. I enjoy
+                cycling, biking, free climbing, and kayaking. <br> </p>
+            <p class="mb-2">   When forced indoors, I follow many sci-fi and fantasy genre movies and television shows, and video
+                games. I spend a large amount of my free time exploring the latest technology advancements in the
+                front-end web development world.</p>
+            <p> When I am bored I listen to music, rap, indipop, remix, and generic music and dance on it and play with
+                my pet. </p>
+            </p>
+        </div>
+    </section>
+
+    <hr class="m-0" />
+    <section class="resume-section" id="certificate">
+        <div class="resume-section-content">
+            <h2 class="mb-5" style="color: #00a6ff;">CERTIFICATES</h2>
+            <ul class="fa-ul mb-0">
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <p>Fundamental of Digital Marketing - <b>Google Digital Unlocked</b>
+                    <a href="https://learndigital.withgoogle.com/link/1tb5mplmosg" target="_blank">click here</a>
+                    (Certificate id – 9L4JENAGA)</p>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <p>JAVA Language - <b>Hackerrank</b> <a
+                        href="https://www.hackerrank.com/certificates/dd88f94012d9" target="_blank">click here</a></p>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <p>Go Language - <b>Hackerrank</b> <a
+                        href="https://www.hackerrank.com/certificates/ad7f9b3ad2e1" target="_blank">click here</a></p>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <p>PHP - <b>Sololearn</b> <a href="https://www.sololearn.com/Certificate/1059-26402984/pdf/" target="_blank">click
+                        here</a></p>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                   <p>5 <sup>th</sup> star in <code>C</code> and <code>C++</code></p>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                    <p>4 <sup>th</sup> star in <code>JAVA</code></p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    </div>
 </body>
 
 </html>

@@ -40,7 +40,7 @@ function writeAnswer(txt){
 speaks("Hi I am DORA, a virtual voice Assistent, Tell me how can i help you");
 
 
-// const API_KEY = "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";
+// const API_KEY = "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";
 // const API_URL = "https://api.openai.com/v1/engines/text-davinci-002/jobs";
 
 // async function generateResponse(prompt) {
@@ -79,7 +79,6 @@ recognition.addEventListener('result',(e)=>{
         if(text.toLowerCase().includes("hi dora") || text.toLowerCase().includes("hello dora")){
             speaks("Hi, How I can Help you");
             writeAnswer("Hi, How I can Help you");
-            content.innerHTML = '"Ask your question"';
         }
         else if(text.toLowerCase().includes("time")){
             var hours = new Date().getHours();
@@ -92,18 +91,16 @@ recognition.addEventListener('result',(e)=>{
             strTime = "Is it "+strTime;
             speaks(strTime);
             writeAnswer(strTime);
-            content.innerHTML = '"Ask your question"';
         }
         else if(text.toLowerCase().includes("date")){
             let today = new Date().toISOString().slice(0, 10);
             today = "Today is "+today;
             speaks(today);
             writeAnswer(today);
-            content.innerHTML = '"Ask your question"';
         }else{
             speaks("Sorry, I am not fully ready, I am in a development mode at this time");
             writeAnswer("Sorry, I am not fully ready, I am in a development mode at this time");
-            content.innerHTML = '"Ask your question"';
+            
         }
         // else{
         //     const response = main(text);
@@ -111,6 +108,7 @@ recognition.addEventListener('result',(e)=>{
         //     writeAnswer(response);
         //     content.innerHTML = '"Ask your question"';
         // }
+        content.innerHTML = '"Ask your question"';
     }
 });
 
