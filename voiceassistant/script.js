@@ -40,7 +40,7 @@ function writeAnswer(txt){
 speaks("Hi I am DORA, a virtual voice Assistent, Tell me how can i help you");
 
 
-// const API_KEY = "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";
+// const API_KEY = "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";
 // const API_URL = "https://api.openai.com/v1/engines/text-davinci-002/jobs";
 
 // async function generateResponse(prompt) {
@@ -97,17 +97,56 @@ recognition.addEventListener('result',(e)=>{
             today = "Today is "+today;
             speaks(today);
             writeAnswer(today);
-        }else{
-            speaks("Sorry, I am not fully ready, I am in a development mode at this time");
-            writeAnswer("Sorry, I am not fully ready, I am in a development mode at this time");
-            
         }
         // else{
-        //     const response = main(text);
-        //     speaks(response);
-        //     writeAnswer(response);
-        //     content.innerHTML = '"Ask your question"';
+        //     speaks("Sorry, I am not fully ready, I am in a development mode at this time");
+        //     writeAnswer("Sorry, I am not fully ready, I am in a development mode at this time");
+            
         // }
+        else if(text.toLowerCase().includes("search")){
+            speaks("Okey i search "+text.replace("search", "")+"on Google");
+            window.open(`http://google.com/search?q=${text.replace("search", "")}`, "_blank");
+        }
+        else if(text.toLowerCase().includes("open")){
+            if(text.toLowerCase().includes("youtube")){
+                speaks("Opening Youtube");
+                window.open(`http://www.youtube.com`, "_blank");
+            }
+            else if(text.toLowerCase().includes("instagram")){
+                speaks("Opening instagram");
+                window.open(`http://www.instagram.com`, "_blank");
+            }
+            else if(text.toLowerCase().includes("linkedin")){
+                speaks("Opening linkedin");
+                window.open(`http://www.linkedin.com`, "_blank");
+            }
+            else if(text.toLowerCase().includes("facebook")){
+                speaks("Opening facebook");
+                window.open(`http://www.facebook.com`, "_blank");
+            }
+        }else if(text.toLowerCase().includes("who is") || text.toLowerCase().includes("what is")){
+            //code of wikipedia
+            if(text.toLowerCase().includes("who is"))
+                var title = text.replace("who is" , "");
+            else var title = text.replace("what is" , "");
+            var url = "https://en.wikipedia.org/w/api.php?format=json&action=query&origin=*&prop=extracts&exintro&explaintext&redirects=1&titles="+title
+            
+            fetch(url)
+            .then(response => response.json())
+            .then(response => {
+                response = response.query.pages;
+                var pageid = Object.keys(response)[0];
+                var result = response[pageid].extract;
+                speaks(result);
+                writeAnswer(result);
+            })
+        }
+        else{
+            // const response = main(text);
+            // speaks(response);
+            // writeAnswer(response);
+            content.innerHTML = '"Ask your question"';
+        }
         content.innerHTML = '"Ask your question"';
     }
 });
