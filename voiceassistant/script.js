@@ -143,8 +143,9 @@ recognition.addEventListener('result',(e)=>{
         }
         else{
             // const response = main(text);
-            // speaks(response);
-            // writeAnswer(response);
+            var response = "I am in development mode so sorry i can't tell you a solution of this question";
+            speaks(response);
+            writeAnswer(response);
             content.innerHTML = '"Ask your question"';
         }
         content.innerHTML = '"Ask your question"';
