@@ -201,6 +201,7 @@ function copyLink(){
 }
 function join(){
 	window.location.hash = document.getElementById('genrated-room-code').value;
+	location.reload(); 
 }
 
 window.onload = function(){
