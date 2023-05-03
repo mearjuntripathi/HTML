@@ -34,9 +34,9 @@
         <br><br>
         <div class="text-center">
             <p class="answer"></p>
+            <button id="genrated" style="visibility: hidden;"><i class="fa fa-times"></i>
+                stop genration</button>
         </div>
-
-        </form>
     </div>
     <script src="script.js"></script>
 
@@ -65,14 +65,35 @@
     }
     p{
         color: #00bcd4;
+        overflow-y: auto;
+        overflow-x: hidden;
+        max-height: 50vh;
     }
     .answer{
         color: chartreuse;
     }
+    
     .img-thumbnail{
-    background: none;
-    border: none;
-}
+        background: none;
+        border: none;
+    }
+
+    #genrated{
+        background-color: rgb(0, 91, 91);
+        opacity: .8;
+        border-radius: 15px;
+        font-family: 'Courier New';
+        width: 5cm;
+        border-color: white;
+    }
+    #genrated:hover{
+        background-color: white;
+        border-radius: 15px;
+        font-family: 'Courier New';
+        width: 5cm;
+        border-color: rgb(0, 91, 91);
+    }
+
     
 </style>
 
