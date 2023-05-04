@@ -12,8 +12,10 @@ let speakData = new SpeechSynthesisUtterance();
 let gen = true;
 
 function speaks(message){
-    if(gen == false)
+    if(gen == false){
+        gen = true;
         return;
+    }
     let textToSpeak = message;
     speakData.volume = 1; // From 0 to 1
     speakData.rate = 1; // From 0.1 to 10
@@ -124,7 +126,6 @@ recognition.addEventListener('result',(e)=>{
             })
         }
         else{
-            // const response = main(text);
             var response = "I am in development mode so sorry i can't tell you a solution of this question";
             generateResponse(response);
             content.innerHTML = '"Ask your question"';
