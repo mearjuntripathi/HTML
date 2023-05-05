@@ -139,3 +139,8 @@ recognition.addEventListener('result',(e)=>{
 // })
 
 recognition.start();
+
+
+document.getElementById('copy').addEventListener('click',()=>{
+    navigator.clipboard.writeText(document.getElementById('answer').innerHTML);
+})
