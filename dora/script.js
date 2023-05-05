@@ -14,6 +14,7 @@ let gen = true;
 function speaks(message){
     if(gen == false){
         gen = true;
+        window.speechSynthesis.pause();
         return;
     }
     let textToSpeak = message;
