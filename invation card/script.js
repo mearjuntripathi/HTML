@@ -18,7 +18,7 @@ function writeMessage() {
     var val = Math.floor(Math.random() * messages.length);
     var message = messages[val];
     var i = 0;
-    var speed = 5;
+    var speed = 50;
     text.innerHTML = "";
     function typeWriter() {
         if (i < message.length) {
