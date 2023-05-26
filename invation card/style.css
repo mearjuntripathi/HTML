@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url('https://static-cse.canva.com/blob/1012036/1600w-qorGc89WQGo.jpg');
     background-position: center center;
 
@@ -18,7 +18,7 @@ body{
     background-color: #d4b3b3;
 }
 
-.container{
+.container {
     color: rgb(218, 102, 121);
     margin-top: 300px;
     max-width: 500px;
@@ -31,13 +31,14 @@ body{
     padding: 10px;
     opacity: .8;
     border-radius: 30px;
-    box-shadow: 0px 0px 1000px 0px ;
-}
-.container:hover{
-    box-shadow: 0px 0px 1000px 100px ;
+    box-shadow: 0px 0px 1000px 0px;
 }
 
-.card1{
+.container:hover {
+    box-shadow: 0px 0px 1000px 100px;
+}
+
+.card1 {
     font-family: 'Courier New', Courier, monospace;
     width: 90%;
     margin-right: auto;
@@ -45,7 +46,8 @@ body{
     text-align: center;
     align-items: center;
 }
-#btn{
+
+#btn {
     border: none;
     padding: 10px;
     background-color: rgb(0, 107, 48);
@@ -53,26 +55,134 @@ body{
     margin-top: 10px;
     border-radius: 20px;
     cursor: pointer;
-    
+
 }
 
-.card{
-    border-radius: 25px;
-    background-color: white;
-    margin-top: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    min-height: 200px;
-    max-width: 500px;
-    box-shadow: 0px 0px 100px 0px rgb(5, 255, 5);
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 200px;
+    box-shadow: 0px 0px 100px 30px rgb(255, 139, 214);
+    text-align: center;
 }
-.welcome{
-    background-image: url("invitation.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: auto;
-    margin-right: auto;
-    height: 80vh;
+
+.img {
+    border-radius: 10px;
+    box-shadow: 0px 0px 50px 0px rgb(69, 162, 255);
+}
+
+.card h2 {
+    font-family: cursive;
+    font-style: italic;
+    color: rgb(17, 17, 71);
+}
+
+.mid {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.card h1 {
+    font-family: Monaco;
+    color: rgb(22, 4, 16);
+}
+
+.title {
+    color: rgb(152, 76, 76);
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
     width: 100%;
+    font-size: 18px;
 }
+
+.address {
+    font-family: cursive;
+    color: #ac7070;
+    padding-left: 5px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(61, 239, 239);
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 400px;
+        margin: auto;
+        border-radius: 30px;
+        margin-top: 100px;
+        box-shadow: 0px 0px 100px 30px rgb(255, 139, 214);
+        text-align: center;
+    }
+    
+    .img {
+        border-radius: 10px;
+        box-shadow: 0px 0px 50px 0px rgb(69, 162, 255);
+    }
+    
+    .card h2 {
+        font-family: cursive;
+        font-style: italic;
+        color: rgb(17, 17, 71);
+    }
+    
+    .mid {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    .card h1 {
+        font-family: Monaco;
+        color: rgb(0, 0, 0);
+    }
+    
+    .title {
+        color: rgb(152, 76, 76);
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .card button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+    }
+    
+    .address {
+        font-family: cursive;
+        color: #ac7070;
+        padding-left: 5px;
+    }
+    
+    a {
+        text-decoration: none;
+        font-size: 22px;
+        color: rgb(61, 239, 239);
+        padding: 10px;
+    
+    }
+  }

@@ -1,5 +1,4 @@
 function writeMessage() {
-    document.getElementById('part2').style.display = "none";
     var messages = [
         "It's hard to say goodbye, but I know you have to go. I'll miss you so much, but I'll always be here for you. Good luck in your new journey.",
         "I'm so grateful for the time we've had together. You've taught me so much, and I'm a better person because of you. I'll miss you every day.",
@@ -18,7 +17,7 @@ function writeMessage() {
     var val = Math.floor(Math.random() * messages.length);
     var message = messages[val];
     var i = 0;
-    var speed = 50;
+    var speed = 5;
     text.innerHTML = "";
     function typeWriter() {
         if (i < message.length) {
