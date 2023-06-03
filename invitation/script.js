@@ -36,3 +36,4 @@ function fun() {
     document.getElementById('part2').style.display = "block";
     console.log("done");
 }  
+
