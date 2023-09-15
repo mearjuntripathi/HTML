@@ -1,0 +1,156 @@
+* {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Bot image */
+.recognize {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+}
+
+.recognize img {
+    width: 100%;
+    background-color: teal;
+    mix-blend-mode: color-dodge;
+    max-inline-size: 100px;
+}
+
+/* Chat panel*/
+.chat {
+    margin: auto;
+    margin-bottom: 120px;
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    min-height: 5px;
+    max-height: 70vh;
+    overflow-y: auto;
+    border: 1px rgb(48, 44, 44) solid;
+    bottom: 0;
+    font-family: sans-serif;
+}
+
+.receive-mess {
+    display: flex;
+    margin-top: 15px
+}
+
+.send-mess {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+
+.receive-mess p {
+    background-color: rgb(239, 219, 219);
+    box-shadow: 2px 3px 5px 1px rgb(203, 197, 197);
+    color: black;
+    font-family: 'Courier New';
+    padding: 10px;
+    white-space: pre-wrap;
+    max-width: 75%;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.send-mess p {
+    background-color: #202020;
+    box-shadow: -2px 3px 5px 1px rgb(36, 36, 36);
+    padding: 10px;
+    max-width: 75%;
+    border-radius: 10px 10px 0px 10px;
+}
+
+.receive-mess p.error{
+    color: rgb(225, 11, 11);
+    background-color: rgb(211, 153, 153);
+    box-shadow: 2px 3px 5px 1px rgb(195, 156, 156);
+}
+
+/* message box*/
+.message {
+    bottom: 0;
+    margin-bottom: 35px;
+    display: inline-flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(63, 63, 63);
+    padding: 10px;
+}
+
+/* svg icons */
+.icon {
+    background: none;
+    width: 20px;
+    align-items: center;
+    fill: greenyellow;
+}
+
+
+/*question box*/
+.question {
+    width: 70%;
+    border-radius: 10px;
+    border: none;
+    font-size: large;
+    outline: none;
+    resize: none;
+    padding: 10px 10px;
+    background-color: rgb(37, 37, 37);
+    box-shadow: 0px 0px 10px 2px rgb(20, 20, 20);
+    font-family: Courier New;
+}
+
+/*buttons*/
+.btn {
+    background-color: rgb(106, 104, 108);
+    font-size: larger;
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    width: 60px;
+    border: none;
+    border-radius: 100%;
+}
+
+/* scrolling system */
+#query::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#query {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+footer {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(63, 63, 63);
+    padding: 5px;
+}
+
+footer p {
+    font-family: Haettenschweiler;
+    background-color: rgb(63, 63, 63);
+}
+
+
+
+@media only screen and (min-device-height: 0px) and (max-device-height: 700px) and (orientation: landscape) {
+    /* .recognize{
+        display: none;
+    } */
+}
