@@ -46,34 +46,44 @@
     margin-top: 10px;
 }
 
-.receive-mess span{
+.receive-mess span {
     box-shadow: 2px 3px 5px 1px rgb(32, 32, 32);
     border: 1px solid rgb(32, 32, 32);
     background-color: rgb(239, 219, 219);
-    padding: 5px; /* Example padding */
+    padding: 5px;
+    /* Example padding */
     border-radius: 10px 10px 10px 0px;
     max-width: 75%;
 }
 
 /* Styling for Java code with horizontal scrolling */
-pre{
-    background-color: #323232; /* Background color for code blocks */
-    padding: 10px; /* Padding around code blocks*/
-    border: 1px solid #ccc; /* Border for code blocks */
-    border-radius: 5px; /* Rounded corners for code blocks */
-    font-family: 'Courier New'; /* Font family for code */
-    font-size: 14px; /* Font size for code */
-    line-height: 1.5; /*Line height for code*/
-    overflow-x:auto; /* Enable horizontal scrolling when content overflows */
-    
+pre {
+    background-color: #323232;
+    /* Background color for code blocks */
+    padding: 10px;
+    /* Padding around code blocks*/
+    border: 1px solid #ccc;
+    /* Border for code blocks */
+    border-radius: 5px;
+    /* Rounded corners for code blocks */
+    font-family: 'Courier New';
+    /* Font family for code */
+    font-size: 14px;
+    /* Font size for code */
+    line-height: 1.5;
+    /*Line height for code*/
+    overflow-x: auto;
+    /* Enable horizontal scrolling when content overflows */
+
 }
-code{
+
+code {
     border-radius: 2px;
     padding: 1px;
     background-color: #323232;
 }
 
-.receive-mess p{
+.receive-mess p {
     background-color: rgb(239, 219, 219);
     color: black;
     font-family: sans-serif;
@@ -83,7 +93,7 @@ code{
     /* max-width: 75%; */
 }
 
-.send-mess p{
+.send-mess p {
     background-color: #232222;
     border: 1px solid rgb(46, 46, 46);
     box-shadow: -2px 3px 5px 1px rgb(46, 46, 46);
@@ -93,18 +103,20 @@ code{
     border-radius: 10px 10px 0px 10px;
 }
 
-.error{
+.error {
     color: rgb(255, 0, 0);
     background-color: rgb(220, 181, 181);
     box-shadow: 2px 3px 5px 1px rgb(32, 32, 32);
     border: 1px solid rgb(32, 32, 32);
     /* background-color: rgb(239, 219, 219); */
-    padding: 5px; /* Example padding */
+    padding: 5px;
+    /* Example padding */
     border-radius: 10px 10px 10px 0px;
     max-width: 75%;
     overflow: hidden;
 }
-a{
+
+a {
     white-space: pre-wrap;
     word-wrap: break-word;
     background-color: #434343;
@@ -112,9 +124,10 @@ a{
     border-radius: 5px;
 }
 
-.error p{
+.error p {
     color: red;
 }
+
 /* message box*/
 .message {
     bottom: 0;

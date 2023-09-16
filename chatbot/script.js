@@ -1,24 +1,24 @@
 
 const chatBox = document.querySelector('.chat');
-let API_KEY ;
+let API_KEY;
 
 
-window.addEventListener("blur",()=>{
+window.addEventListener("blur", () => {
     document.title = "Need a help?";
 })
 
-window.addEventListener("focus",()=>{
+window.addEventListener("focus", () => {
     document.title = "D.O.R.A.";
 })
 
-window.addEventListener('load',()=>{
+window.addEventListener('load', () => {
     const API = prompt("Enter you OPEN AI API-KEY");
 
-    if(API == "" || API == null){
+    if (API == "" || API == null) {
         alert("Sorry you can't use our chat bot");
         confirm("Are you Want to exit") ? window.location.replace('/') : location.reload();
     }
-    else{ 
+    else {
         alert("Your API KEY is update enjoy your chat");
         API_KEY = API;
     }
@@ -36,23 +36,23 @@ document.getElementById("query").addEventListener("input", () => {
 });
 
 // Hit enter
-document.getElementById("query").addEventListener("keypress", (event)=> {
+document.getElementById("query").addEventListener("keypress", (event) => {
     // If the user presses the "Enter" key on the keyboard
-    if (event.key === "Enter"  && (document.getElementById('query').value.length > 0)) {
-      // Cancel the default action, if needed
-      event.preventDefault();
-      // Trigger the button element with a click
-      document.getElementById("send").click();
-    }else if(event.key === "Enter"){
+    if (event.key === "Enter" && (document.getElementById('query').value.length > 0)) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.getElementById("send").click();
+    } else if (event.key === "Enter") {
         event.preventDefault();
         document.getElementById('query').value = "";
     }
-  }); 
+});
 
 // this is a microphone operation
 document.getElementById('mic').addEventListener('click', () => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if(!SpeechRecognition)
+    if (!SpeechRecognition)
         alert("Sorry, Speech recognition is not supported by your browser. Please use Chrome or enable it in your browser.");
     const recognition = new SpeechRecognition();
     recognition.interimResults = true;
@@ -79,17 +79,17 @@ document.getElementById('mic').addEventListener('click', () => {
 
 
 // creating a new chat div
-const createChatDiv = (message,className) => {
+const createChatDiv = (message, className) => {
     const chatDiv = document.createElement('div');
     chatDiv.classList.add(className);
     let chatContent = `<p></p>`;
     chatDiv.innerHTML = chatContent;
     chatDiv.querySelector("p").textContent = message;
-    return chatDiv; 
+    return chatDiv;
 }
 
 // genrating a response
-const genrateResponse = (message,response) => {
+const genrateResponse = (message, response) => {
     // Important chat-gpt api key non-shareable
 
     const API_URL = "https://api.openai.com/v1/chat/completions";
@@ -98,44 +98,44 @@ const genrateResponse = (message,response) => {
 
     const requestOption = {
         method: "POST",
-        headers:{
+        headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${API_KEY}`
         },
         body: JSON.stringify({
             "model": "gpt-3.5-turbo",
-            "messages": [{"role": "user","content": message}]
+            "messages": [{ "role": "user", "content": message }]
         })
     }
     // we get a responce
     let emess; // check for error message
-    fetch(API_URL,requestOption).then(res => res.json()).then(data=>{
+    fetch(API_URL, requestOption).then(res => res.json()).then(data => {
         d = data;
         response.innerHTML = `<span>${marked(data.choices[0].message.content)}</span>`;
-    }).catch((err)=>{
+    }).catch((err) => {
         response.innerHTML = `<span class='error'><p>Oops! Somthing went wrong</p>${marked(d.error.message)}</span>`;
-    }).finally(()=>{chatBox.scrollTo(0,chatBox.scrollHeight)})
+    }).finally(() => { chatBox.scrollTo(0, chatBox.scrollHeight) })
 
 
 }
 
 // sending button andling a chat button
 
-document.getElementById('send').addEventListener('click',()=>{
+document.getElementById('send').addEventListener('click', () => {
     let query = document.getElementById('query').value.trim();
-    chatBox.append(createChatDiv(query,"send-mess"));
-    chatBox.scrollTo(0,chatBox.scrollHeight) 
+    chatBox.append(createChatDiv(query, "send-mess"));
+    chatBox.scrollTo(0, chatBox.scrollHeight)
 
 
     document.getElementById('query').value = "";
 
-    setTimeout(()=>{
+    setTimeout(() => {
         // Display a tinking on chat;
-        const response = createChatDiv("thinking . . .","receive-mess")
+        const response = createChatDiv("thinking . . .", "receive-mess")
         chatBox.append(response);
-        genrateResponse(query,response);
-    },600);
-    document.getElementById('send').style.display = 'none'; 
+        genrateResponse(query, response);
+    }, 600);
+    document.getElementById('send').style.display = 'none';
     document.getElementById('mic').style.display = 'block';
 })
 
