@@ -113,7 +113,7 @@ const genrateResponse = (message,response) => {
         d = data;
         response.innerHTML = `<span>${marked(data.choices[0].message.content)}</span>`;
     }).catch((err)=>{
-        response.innerHTML = `<span><p class='error'>Oops! Somthing went wrong<br>${d.error.message}</p><span>`;
+        response.innerHTML = `<span class='error'><p>Oops! Somthing went wrong</p>${marked(d.error.message)}</span>`;
     }).finally(()=>{chatBox.scrollTo(0,chatBox.scrollHeight)})
 
 
