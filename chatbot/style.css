@@ -17,7 +17,7 @@
     width: 100%;
     background-color: teal;
     mix-blend-mode: color-dodge;
-    max-inline-size: 100px;
+    max-inline-size: 50px;
 }
 
 /* Chat panel*/
@@ -28,7 +28,7 @@
     width: 100%;
     padding: 10px;
     min-height: 5px;
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: auto;
     border: 1px rgb(48, 44, 44) solid;
     bottom: 0;
@@ -46,30 +46,59 @@
     margin-top: 10px;
 }
 
-
-.receive-mess p {
+.receive-mess span{
+    box-shadow: 2px 3px 5px 1px rgb(32, 32, 32);
+    border: 1px solid rgb(32, 32, 32);
     background-color: rgb(239, 219, 219);
-    box-shadow: 2px 3px 5px 1px rgb(203, 197, 197);
-    color: black;
-    font-family: 'Courier New';
-    padding: 10px;
-    white-space: pre-wrap;
-    max-width: 75%;
+    padding: 5px; /* Example padding */
     border-radius: 10px 10px 10px 0px;
+    max-width: 75%;
 }
 
-.send-mess p {
-    background-color: #202020;
-    box-shadow: -2px 3px 5px 1px rgb(36, 36, 36);
+/* Styling for Java code with horizontal scrolling */
+pre{
+    background-color: #323232; /* Background color for code blocks */
+    padding: 10px; /* Padding around code blocks*/
+    border: 1px solid #ccc; /* Border for code blocks */
+    border-radius: 5px; /* Rounded corners for code blocks */
+    font-family: 'Courier New'; /* Font family for code */
+    font-size: 14px; /* Font size for code */
+    line-height: 1.5; /*Line height for code*/
+    overflow-x:auto; /* Enable horizontal scrolling when content overflows */
+    
+}
+code{
+    border-radius: 2px;
+    padding: 1px;
+    background-color: #323232;
+}
+
+.receive-mess p{
+    background-color: rgb(239, 219, 219);
+    color: black;
+    font-family: sans-serif;
     padding: 10px;
+    white-space: pre-wrap;
+    border-radius: 10px 10px 10px 0px;
+    /* max-width: 75%; */
+}
+
+.send-mess p{
+    background-color: #232222;
+    border: 1px solid rgb(46, 46, 46);
+    box-shadow: -2px 3px 5px 1px rgb(46, 46, 46);
+    padding: 10px;
+    font-weight: bold;
     max-width: 75%;
     border-radius: 10px 10px 0px 10px;
 }
 
 .receive-mess p.error{
-    color: rgb(225, 11, 11);
-    background-color: rgb(211, 153, 153);
-    box-shadow: 2px 3px 5px 1px rgb(195, 156, 156);
+    color: rgb(255, 0, 0);
+    background-color: rgb(220, 181, 181);
+    box-shadow: 2px 3px 5px 1px rgb(46, 46, 46);
+    max-width: 75%;
+    border-radius: 10px 10px 10px 0px;
 }
 
 /* message box*/
@@ -104,6 +133,7 @@
     resize: none;
     padding: 10px 10px;
     background-color: rgb(37, 37, 37);
+    border: 1px solid rgb(19, 19, 19);
     box-shadow: 0px 0px 10px 2px rgb(20, 20, 20);
     font-family: Courier New;
 }

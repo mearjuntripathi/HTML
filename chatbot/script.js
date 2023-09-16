@@ -1,4 +1,6 @@
+
 const chatBox = document.querySelector('.chat');
+let API_KEY ;
 
 
 window.addEventListener("blur",()=>{
@@ -7,6 +9,19 @@ window.addEventListener("blur",()=>{
 
 window.addEventListener("focus",()=>{
     document.title = "D.O.R.A.";
+})
+
+window.addEventListener('load',()=>{
+    const API = prompt("Enter you OPEN AI API-KEY");
+
+    if(API == "" || API == null){
+        alert("Sorry you can't use our chat bot");
+        confirm("Are you Want to exit") ? window.location.replace('/') : location.reload();
+    }
+    else{ 
+        alert("Your API KEY is update enjoy your chat");
+        API_KEY = API;
+    }
 })
 
 // button mic
@@ -67,7 +82,7 @@ document.getElementById('mic').addEventListener('click', () => {
 const createChatDiv = (message,className) => {
     const chatDiv = document.createElement('div');
     chatDiv.classList.add(className);
-    let chatContent = `<p markdown="1"></p>`;
+    let chatContent = `<p></p>`;
     chatDiv.innerHTML = chatContent;
     chatDiv.querySelector("p").textContent = message;
     return chatDiv; 
@@ -76,11 +91,11 @@ const createChatDiv = (message,className) => {
 // genrating a response
 const genrateResponse = (message,response) => {
     // Important chat-gpt api key non-shareable
-    const API_KEY = "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";
+    // const API_KEY = "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";
 
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
-    const messageElement = response.querySelector("p")
+    // const messageElement = response.querySelector("p")
 
     const requestOption = {
         method: "POST",
@@ -94,11 +109,12 @@ const genrateResponse = (message,response) => {
         })
     }
     // we get a responce
+    let emess; // check for error message
     fetch(API_URL,requestOption).then(res => res.json()).then(data=>{
-        messageElement.textContent = data.choices[0].message.content;
+        d = data;
+        response.innerHTML = `<span>${marked(data.choices[0].message.content)}</span>`;
     }).catch((err)=>{
-        messageElement.classList.add("error");
-        messageElement.textContent = "Oops! Somthing went wrong";
+        response.innerHTML = `<p class='error'>Oops! Somthing went wrong<br>${d.error.message}</p>`;
     }).finally(()=>{chatBox.scrollTo(0,chatBox.scrollHeight)})
 
 
