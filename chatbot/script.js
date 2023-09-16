@@ -91,7 +91,6 @@ const createChatDiv = (message,className) => {
 // genrating a response
 const genrateResponse = (message,response) => {
     // Important chat-gpt api key non-shareable
-    // const API_KEY = "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";
 
     const API_URL = "https://api.openai.com/v1/chat/completions";
 
@@ -114,7 +113,7 @@ const genrateResponse = (message,response) => {
         d = data;
         response.innerHTML = `<span>${marked(data.choices[0].message.content)}</span>`;
     }).catch((err)=>{
-        response.innerHTML = `<p class='error'>Oops! Somthing went wrong<br>${d.error.message}</p>`;
+        response.innerHTML = `<span><p class='error'>Oops! Somthing went wrong<br>${d.error.message}</p><span>`;
     }).finally(()=>{chatBox.scrollTo(0,chatBox.scrollHeight)})
 
 
