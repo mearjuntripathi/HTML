@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(18, 18, 18);
+    color: white;
+    font-family: monospace;
+}
+
+.body{
+    padding: 10px;
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    padding: 10px;
+    user-select: none;
+}
+
+.container{
+    margin:auto;
+    max-width: 700px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-flow: column;
+    max-height: 50vh;
+    overflow-y: auto;
+    justify-content: center;
+}
+
+.input{
+    margin: 100px auto 20px;
+    padding: 10px;
+    max-width: 650px;
+    display: flex;
+    box-shadow: 0px 0px 5px 1px rgb(63, 63, 63);
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.input:hover{
+    box-shadow: 0px 0px 5px 1px;
+}
+
+.input input{
+    width: 90%;
+    border: none;
+    color:white;
+    font-weight: bolder;
+    outline: none;
+    font-size: larger;
+}
+
+.input button{
+    background-color: rgb(11, 187, 11);
+    border: none;
+    border-radius: 50%;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.input button:hover{
+    background-color: rgb(9, 154, 9);
+}
+
+.input button > .fa{
+    background: none;
+    color: rgb(18, 18, 18)
+}
+
+.empty{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(28, 160, 33);
+}
+
+.empty p {
+    background: none;
+    color: #fff;
+    font-size: xx-large;
+    user-select: none;
+}
+
+.task{
+    width: 90%;
+    background-color: rgb(233, 227, 227);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task button{
+    background-color: rgb(211, 12, 12);
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.task p{
+    background: none;
+    color: black;
+    font-weight: bold;
+}
+
+.task button:hover{
+    border: 0.5 rem white;
+    background-color: rgb(234, 29, 29);
+    cursor: pointer;
+}
+
+.task button > .fa{
+    background: none;
+    color: rgb(233, 227, 227);
+}
