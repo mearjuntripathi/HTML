@@ -1,8 +1,6 @@
 body {
     color: white;
-    background-image: url(background.png);
-    background-repeat: no-repeat;
-    /* backdrop-filter: blur(3px); */
+    background-color: rgb(30, 29, 31);
     background-size: cover;
     background-attachment: fixed;
 }
