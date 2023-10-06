@@ -13,10 +13,6 @@ body {
     margin: 80px auto;
     max-width: 80%;
     padding: 50px 30px;
-    /* position: absolute; */
-    /* transform: translate(-50%, -50%); */
-    /* left: 50%;
-    top: 50%; */
     border-radius: 10px;
     box-shadow: 0 25px 50px rgba(13, 39, 68, 0.2);
 }
@@ -150,4 +146,15 @@ input[type="color"]::-moz-color-swatch {
 
 .active {
     background-color: #e0e9ff;
+}
+
+@media (max-width: 800px){
+    .container {
+        background-color: #ffffff;
+        margin: auto;
+        max-width: 1000%;
+        padding: 30px 10px;
+        border-radius: 10px;
+        box-shadow: 0 25px 50px rgba(13, 39, 68, 0.2);
+    }
 }

@@ -116,6 +116,54 @@ imageButton.addEventListener("click", () => {
     }
 });
 
+window.addEventListener('keydown', event => {
+    if ((event.ctrlKey || event.metaKey) && (event.key === 'b' || event.key === 'B')) {
+        event.preventDefault();
+        document.querySelector('#bold').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && (event.key === 'i' || event.key === 'I')) {
+        event.preventDefault();
+        document.querySelector('#italic').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && (event.key === 'u' || event.key === 'U')) {
+        event.preventDefault();
+        document.querySelector('#underline').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.key === 'l' || event.key === 'L')) {
+        event.preventDefault();
+        document.querySelector('#justifyLeft').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.key === 'e' || event.key === 'E')) {
+        event.preventDefault();
+        document.querySelector('#justifyCenter').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.key === 'r' || event.key === 'R')) {
+        event.preventDefault();
+        document.querySelector('#justifyRight').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.shiftKey && (event.key === 'f' || event.key === 'F')) {
+        event.preventDefault();
+        document.querySelector('#justifyFull').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key === '+') {
+        event.preventDefault();
+        document.querySelector('#superscript').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && event.key === '=') {
+        event.preventDefault();
+        document.querySelector('#subscript').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && (event.key === 'o' || event.key === 'o')) {
+        event.preventDefault();
+        document.querySelector('#open').click();
+    }
+    if ((event.ctrlKey || event.metaKey) && (event.key === 's' || event.key === 'S')) {
+        event.preventDefault();
+        document.querySelector('#save').click();
+    }
+});
+
+
 //Highlight clicked button
 const highlighter = (className, needsRemoval) => {
     className.forEach((button) => {
@@ -152,34 +200,37 @@ const highlighterRemover = (className) => {
 
 saveButton.addEventListener("click", () => {
     // Function to save content as HTML
-    const content = writingArea.innerHTML; // Get the content from the editor
-    const htmlContent = `
-      <!DOCTYPE html>
-      <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Saved Rich Text</title>
-      </head>
-      <body>
-        ${content}
-      </body>
-      </html>
-    `;
-  
-    // Create a Blob with the HTML content
-    const blob = new Blob([htmlContent], { type: "text/html" });
-  
-    // Create a link to download the Blob as an HTML file
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = document.getElementById('fileName').value;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    if(confirm(`Do You want to save ${document.getElementById('fileName').value} file`)){
+        const content = writingArea.innerHTML; // Get the content from the editor
+        const htmlContent = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Saved Rich Text</title>
+        </head>
+        <body>
+            ${content}
+        </body>
+        </html>
+        `;
+    
+        // Create a Blob with the HTML content
+        const blob = new Blob([htmlContent], { type: "text/html" });
+    
+        // Create a link to download the Blob as an HTML file
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = document.getElementById('fileName').value;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+    }
 });
+
 // open a existing file to modify
 openButton.addEventListener("click", () => {
     console.log("hi");
