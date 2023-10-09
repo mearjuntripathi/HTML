@@ -187,7 +187,7 @@ These topics collectively form the foundation for building a rich text editor an
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](../LICENSE.md).
 
 ## Acknowledgments
 
