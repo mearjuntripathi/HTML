@@ -2,134 +2,293 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-
-  <link rel="icon" href="https://avatars.githubusercontent.com/u/74202760?v=4">
-  <meta name="description" content="mearjuntripathi">
-  <meta name="keywords" content="Arjun Tripathi">
-  <meta name="keywords" content="Arjun">
-  <title>mearjuntripathi</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arjun Tripathi</title>
+    <link rel="icon" href="./image/profile.JPG">
+    <!-- It is a Awasome Font Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
 </head>
 
-<body>
+<body class="dark">
+    <header>
+        <h1 onclick="location.href=''">ARJUN TRIPATHI</h1>
+        <nav>
+            <button class="bars"><img src="image/profile.JPG"></button>
+            <ul class="nav-link" id="nav">
+                <li><a class="active" href="#about">About</a></li>
+                <li><a href="#experience">Experiance</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#education">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- About Section -->
+        <div class="about section">
+            <div class="hello">
+                <div>
+                    <p>Hello 👋, I'm</p>
+                    <h1>Arjun Tripathi</h1>
+                    <div id="message">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="profile-pic">
+                    <img src="./image/profile.JPG" alt="">
+                </div>
+            </div>
+            <div class="connect">
+                <button id="connect">Connect With Me</button>
+                <button
+                    onclick="window.open('https://drive.google.com/file/d/1Mv5DWDf4irEpPzR6Vx0G7YGRvy8spXaw/view?usp=drive_link', '_blank')">View
+                    Resume</button>
 
-  <body class="d-flex
-            justify-content-center
-            align-items-center
-            vh-100">
-    <div class="w-400 p-5 shadow rounded">
-      <div class="d-flex
-                        justify-content-center
-                        align-items-center
-                        flex-column
-                        bg-dark 
-                        text-white">
+                <div class="social hide">
+                    <a href="mailto:mearjuntripathi@gmail.com" target="_blank"><img style="width:40px;"
+                            src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png"
+                            alt=""></a>
+                    <a href="tel:+918887135297" target="_blank"><i class="fa fa-mobile fa-3x"
+                            style="color: rgb(0, 0, 0);"></i></a>
+                    <a href="https://linkedin.com/in/mearjuntripathi" target="_blank"><i class="fa fa-linkedin fa-2x"
+                            style="color: blue;"></i></a>
+                    <a href="https://github.com/mearjuntripathi" target="_blank"><i class="fa fa-github fa-3x"
+                            style="color: black;"></i></a>
+                    <a href="https://x.com/mearjuntripathi" target="_blank"><img
+                            src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_400x400.jpg"
+                            style="width: 40px; border-radius: 50%;" alt=""></a>
+                    <a href="https://instagram.com/mearjuntripathi" target="_blank"><i class="fa fa-instagram fa-3x"
+                            style="color: rgb(234, 17, 17);"></i></a>
+                    <a href="https://leetcode.com/mearjuntripathi" target="_blank"><img style="width:40px;"
+                            src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
+                            alt="leetcode"></a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="experience section">
+            <div class="heading">
+                <h1>Experience</h1>
+            </div>
+            <div class="experiences">
+                <div class="ecard">
+                    <div class="company-name">
+                        <img src="./image/rhizicube.png"
+                            style="width: 30px; height: 30px; border-radius: 5px 0px 0px 5px;" alt="rhizicube">
+                        <h2>Rhizicube</h2>
+                    </div>
+                    <hr>
+                    <div class="title-name">
+                        <p>SOFTWARE ENGINEER INTERN</p>
+                        <span>Jul-2022 - Nov-2022</span>
+                    </div>
+                    <div class="used-technology">
+                        <h4><u>Learn Technology</u></h4>
+                        <p>GOlang • gRPC • RESTAPIs • Zapier • Postman • JSON • JS </p>
+                    </div>
+                    <div class="quote">
+                        "Collaborated with cross-functional teams to create APIs for NETCORE and Zapier integration.
+                        Proficient in API testing using POSTMAN, Thunder Client, and curl. Developed production-ready
+                        APIs using GO, JavaScript, REST API, and gRPC. Enhanced soft skills by engaging with senior
+                        colleagues and HR."
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="project section">
+            <div class="heading">
+                <h1>MY PROJECTS</h1>
+            </div>
+            <div class="projects">
+                <!-- chat bot -->
+                <div class="pcard">
+                    <div class="img-section">
+                        <img style="width: 100px;" src="./image/chatbot.gif" alt="">
+                    </div>
+                    <div class="info-section">
+                        <h3>Chat BOT</h3>
+                        <h5>Used Technology: <span>HTML • CSS • JS • OPENAI</span></h5>
+                        <p>Code for a responsive and user-friendly chatbot website, created using HTML, CSS, and
+                            JavaScript, and requiring an OpenAI API key for functionality.</p>
+                        <div class="view">
+                            <a target="_blank" href="https://mearjuntripathi.github.io/chatbot/" class="live"><i
+                                    class="fa fa-eye"> Live website</i></a>
+                            <a target="_blank"
+                                href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/chatbot#chatbot-website-readme"
+                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
+                        </div>
+                    </div>
+                </div>
 
-        <img src="https://avatars.githubusercontent.com/u/74202760?v=4" class="w-50 rounded-circle">
-        <h3 class="display-4 fs-1 
-                           text-center">
-          <b><u>mearjuntripathi</u></b>
-        </h3>
-      </div>
+                <!-- chat-on -->
+                <div class="pcard">
+                    <div class="img-section">
+                        <img style="width: 100px;" src="./image/chaton.gif" alt="">
+                    </div>
+                    <div class="info-section">
+                        <h3>ChatON</h3>
+                        <h5>Used Technology: <span>HTML • CSS • JS • PHP • mySQL • JQuery • Scale Drone</span></h5>
+                        <p>A simple PHP-based chat application that allows users to communicate in real-time, with
+                            video-call facility.</p>
+                        <div class="view">
+                            <a target="_blank" href="https://greatchatson.000webhostapp.com/" class="live"><i
+                                    class="fa fa-eye"> Live website</i></a>
+                            <a target="_blank"
+                                href="https://github.com/mearjuntripathi/PHP/tree/main/chat_on#chat-application"
+                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
+                        </div>
+                    </div>
+                </div>
 
-      <table class="table table-striped" align="center">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Project</th>
-            <th scope="col">Live</th>
-            <th scope="col">Code</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">Portfolio</th>
-            <td><a href="https://mearjuntripathi.github.io/portfolio/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/portfolio"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Blog Writer</th>
-            <td><a href="https://mearjuntripathi.github.io/blog-writer/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/blog-writer"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Voice Assistant</th>
-            <td><a href="https://mearjuntripathi.github.io/dora/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/dora"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Calculator</th>
-            <td><a href="https://mearjuntripathi.github.io/calculator/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/calculator"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Stranger</th>
-            <td><a href="https://mearjuntripathi.github.io/stranger/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/stranger"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">tic tak toe</th>
-            <td><a href="https://mearjuntripathi.github.io/tiktactoe/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/tiktactoe"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Image to Pdf</th>
-            <td><a href="https://mearjuntripathi.github.io/imagetopdf/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/imagetopdf"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Code Editor</th>
-            <td><a href="https://mearjuntripathi.github.io/codeeditor/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/codeeditor"
-                target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Chat Application</th>
-            <td><a href="https://greatchatson.000webhostapp.com/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/PHP/tree/main/chat_on" target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">Chat BOT</th>
-            <td><a href="https://mearjuntripathi.github.io/chatbot/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/chatbot" target="_blank">click</a></td>
-          </tr>
-          <tr>
-            <th scope="row">TO-DO List</th>
-            <td><a href="https://mearjuntripathi.github.io/TO-DO list/" target="_blank">click</a></td>
-            <td><a href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/TO-DO list" target="_blank">click</a></td>
-          </tr>
-        </tbody>
-      </table>
+                <!-- Blog-website -->
+                <div class="pcard">
+                    <div class="img-section">
+                        <img style="width: 100px;"
+                            src="./image/blog-writter.png"
+                            alt="">
+                    </div>
+                    <div class="info-section">
+                        <h3>Blog Writter</h3>
+                        <h5>Used Technology: <span>HTML • CSS • JS </span></h5>
+                        <p>This is a web-based rich text editor that allows users to create and edit text with various
+                            formatting options, including bold, italic, underline, and more. It also provides features
+                            for adding links, images, and adjusting text alignment. Users can save and open their text
+                            content as HTML files.</p>
+                        <div class="view">
+                            <a target="_blank" href="https://mearjuntripathi.github.io/blog-writer/" class="live"><i
+                                    class="fa fa-eye"> Live website</i></a>
+                            <a target="_blank"
+                                href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/blog-writer#rich-text-editor"
+                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- read more -->
+            <div class="load-more">
+                <a href="projects.html">View All Projects >> </a>
+            </div>
+        </div>
 
-      <center>
-        © Copyright 2023 - 2024
-        <br>
-        All Right Reserved
-        <br>
-        BY
-        <br>
-        <a href="https://www.linkedin.com/in/mearjuntripathi">Arjun Tripathi</a>
-      </center>
+        <hr>
+        <!-- skill section -->
+        <div class="skill section">
+            <div class="heading">
+                <h1>SKILL</h1>
+            </div>
+            <div class="skills">
+                <div class="scard">
+                    <div class="topic">
+                        <i class="fa fa-code"></i>
+                        <h2>Programming Language</h2>
+                    </div>
+                    <hr>
+                    <div class="languages">
+                        <img src="./image/c.svg" style="width: 50px;" alt="C language" />
+                        <img src="./image/cpp.svg" style="width: 50px;" alt="CPP language" />
+                        <img src="./image/java.svg" style="width: 50px;" alt="JAVA language" />
+                        <img src="./image/golang.svg" style="width: 100px;" alt="golang" />
+                        <img src="./image/js.svg" style="width: 50px;" alt="" />
+                    </div>
+                </div>
+
+                <div class="scard">
+                    <div class="topic">
+                        <img src="./image/dev.svg"
+                            style="width: 35px; background-color: rgb(55, 139, 255); padding: 2px; border-radius: 5px 0px 0px 5px;">
+                        <h2>Web Development</h2>
+                    </div>
+                    <hr>
+                    <div class="languages">
+                        <img src="./image/html.svg" style="width: 50px;" alt="HTML language" />
+                        <img src="./image/css.svg" style="width: 50px;" alt="CSS language" />
+                        <img src="./image/js.svg" style="width: 50px;" alt="JS language" />
+                        <img src="./image/golang.svg" style="width: 100px;" alt="golang" />
+                        <img src="./image/nodejs.svg" style="width: 50px;" alt="nodejs" />
+                        <img src="./image/php.svg" style="width: 60px;" alt="nodejs" />
+                    </div>
+                </div>
+
+                <div class="scard">
+                    <div class="topic">
+                        <i class="fa fa-database"></i>
+                        <h2>Database</h2>
+                    </div>
+                    <hr>
+                    <div class="languages">
+                        <img src="./image/mysql.svg" width="120px" alt="mysql" />
+                        <img src="./image/mongodb.svg" width="180px" alt="mongodb" />
+                    </div>
+                </div>
+
+                <div class="scard">
+                    <div class="topic">
+                        <i class="fa fa-cog"></i>
+                        <h2>Other</h2>
+                    </div>
+                    <hr>
+                    <div class="languages">
+                        <img src="./image/linux.svg" width="60px" alt="linux" />
+                        <img src="./image/visual-studio.svg" width="50px" alt="vscode" />
+                        <img src="./image/github-icon.svg"
+                            style="width: 50px; background-color: white; border-radius: 50%;" alt="vscode" />
+                        <img src="./image/postman.svg" width="50px" alt="postman" />
+                        <img src="./image/xampp.svg" width="50px" alt="postman" />
+                        <img src="./image/apache-netbeans.png" width="50px" alt="postman" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="education section">
+            <div class="heading">
+                <h1>Education</h1>
+            </div>
+            <div class="degrees">
+                <!-- mca -->
+                <div class="degree">
+                    <div class="degree-info">
+                        <h2><span class="highlight">M</span>aster of <span class="highlight">C</span>omputer <span
+                                class="highlight">A</span>pplication</h2>
+                    </div>
+                    <hr>
+                    <div class="title-name">
+                        <p style="background-color: rgb(216, 119, 0);">Dr. A. P. J. Abdul Kalam Technical University</p>
+                        <span>Nov-2022 - PRESENT</span>
+                    </div>
+                    <div class="used-technology">
+                        <h4><u>Learn Technology</u></h4>
+                        <p>JAVA • mySQL • Web Development • nodejs • DSA</p>
+                    </div>
+                </div>
+
+                <!-- bca -->
+                <div class="degree">
+                    <div class="degree-info">
+                        <h2><span class="highlight">B</span>achelor of <span class="highlight">C</span>omputer <span
+                                class="highlight">A</span>pplication</h2>
+                    </div>
+                    <hr>
+                    <div class="title-name">
+                        <p style="background-color: rgb(216, 119, 0);">Mahatma Gandhi Kashi Vidyapith University</p>
+                        <span>Jul-2019 - Nov-2022</span>
+                    </div>
+                    <div class="used-technology">
+                        <h4><u>Learn Technology</u></h4>
+                        <p>C language • C++ Language • Web Development • PHP • OOPs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </body>
+    <button id="mode">
+        <i class="fa fa-sun-o fa-2x" style="color: yellow;"></i>
+    </button>
+    </div>
+</body>
 
 </html>
-
-<script>
-  console.log("   _____                  __                   ___________          .__                      __    .__      .__ ");
-  console.log("  /  _  \\   _______      |__|  __ __    ____   \\__    ___/ _______  |__| ______   _____    _/  |_  |  |__   |__|");
-  console.log(" /  /_\\  \\  \\_  __ \\     |  | |  |  \\  /    \\    |    |    \\_  __ \\ |  | \\____ \\  \\__  \\   \\   __\\ |  |  \\  |  |");
-  console.log("/    |    \\  |  | \\/     |  | |  |  / |   |  \\   |    |     |  | \\/ |  | |  |_> >  / __ \\_  |  |   |   Y  \\ |  |");
-  console.log("\\____|__  /  |__|    /\\__|  | |____/  |___|  /   |____|     |__|    |__| |   __/  (____  /  |__|   |___|  / |__|");
-  console.log("        \\/           \\______|              \\/                            |__|          \\/               \\/      ");
-</script>

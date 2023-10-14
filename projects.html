@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- It is a Awasome Font Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"> 
+    <link rel="stylesheet" href="pstyle.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="./image/profile.JPG">
+    <title>AT - Projects</title>
+</head>
+
+<body class="dark">
+    <header>
+        <img src="image/profile.JPG" alt="">
+        <h1 onclick="location.href='index.html'">ARJUN TRIPATHI</h1>
+    </header>
+
+    <section>
+        <div class="topic">
+            <button name="recent" class="active"><i class="fa fa-cubes"></i> Recent Project</button>
+            <button name="dev"><img src="image/dev.svg" style="width: 20px; height: 20px;">web development</button>
+            <button name="dsa"><i class="fa fa-terminal"></i> DSA</button>
+            <button name="java"><img src="image/java.svg" style="width: 15px; ">JAVA</button>
+            <button name="cpp"><i class="fa fa-code"></i>C/C++</button>
+            <button name="nodejs"><img src="./image/nodejs.svg" style="width: 20px; height: 20px;">JavaScript</button>
+            <button name="go"><img src="image/golang.svg" style="width: 30px; height: 30px;">GOlang</button>
+            <button name="database"><i class="fa fa-database"></i> Database</button>
+        </div>
+        <br>
+        <hr>
+        <div id="projects">
+            <div class="project">
+                <h1 class="title">Topic name</h1>
+                <hr>
+                <p class="used-tech">
+                    Used Technology: 
+                    <span>
+                        cpp js java php
+                    </span>
+                </p>
+                <div class="view">
+                    <a target="_blank" href="https://mearjuntripathi.github.io/chatbot/" class="live"><i
+                            class="fa fa-eye"> Live website</i></a>
+                    <a target="_blank"
+                        href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/chatbot#chatbot-website-readme"
+                        class="documentation"><i class="fa fa-file"> Documentation</i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright by <a href="index.html">@mearjuntripathi</a></p>
+        <div>
+            <i class="fa fa-github" 
+            onclick="window.open('https://github.com/mearjuntripathi', '_blank')">
+            </i>
+            <i class="fa fa-linkedin"
+             style="color: rgb(50, 108, 252);"
+             onclick="window.open('https://linkedin.com/in/mearjuntripathi', '_blank')"
+            ></i>
+            <i class="fa fa-twitter-x" style="color: rgb(13, 13, 13);"></i>
+        </div>
+    </footer>
+    <button id="mode">
+        <i class="fa fa-sun-o fa-2x" style="color: yellow;"></i>
+    </button>
+</body>
+
+</html
