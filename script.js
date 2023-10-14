@@ -8,6 +8,10 @@ document.querySelector('#mode').addEventListener('click', () => {
     }
 })
 
+window.onload = (() => {
+    document.querySelector('.topic button').click();
+})
+
 let recent = [
     { "topic": "DSA NOTES", "tech": "C++ • C • JAVA", "live": "", "docs": "https://github.com/mearjuntripathi/Data_Structure_Algorithm?tab=readme-ov-file#data-structure--algorithm" },
     { "topic": "RestAPI", "tech": "nodejs • js", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/crud-RESTAPI" },
