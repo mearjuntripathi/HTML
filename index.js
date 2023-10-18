@@ -81,6 +81,7 @@ document.querySelector('#mode').addEventListener('click', ()=>{
     }
 })
 
+
 const bars = document.querySelector('.bars');
 bars.addEventListener('click',function(){
     if(bars.innerHTML == '<img src="image/profile.JPG">'){
@@ -93,6 +94,14 @@ bars.addEventListener('click',function(){
     }
 })
 
+let length = document.querySelectorAll('.nav-link li a').length;
+for(let i = 0 ; i < length ; i++){
+    document.querySelectorAll('.nav-link li a')[i].addEventListener('click',function(){
+        if(document.getElementById('nav').className.includes('shownav'))
+            bars.click();
+    })
+}
+
 document.querySelector('#connect').addEventListener('click',()=>{
     if(document.querySelector('.social').className.includes('hide')){
         document.querySelector('.social').classList.remove('hide');
@@ -101,32 +110,6 @@ document.querySelector('#connect').addEventListener('click',()=>{
         document.querySelector('.social').classList.add('hide');
     }
 })
-
-// nav scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        // Remove "active" class from all links
-        document.querySelectorAll('a[href^="#"]').forEach(link => {
-            link.classList.remove('active');
-        });
-
-        // Add "active" class to the clicked link
-        this.classList.add('active');
-        if(document.getElementById('nav').className.includes('shownav')){
-            bars.click();
-        }
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.querySelector('.'+targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
-    });
-});
 
 // Get all anchor links and their corresponding divs
 const anchorLinks = document.querySelectorAll('a[href^="#"]');
@@ -144,7 +127,6 @@ function updateActiveLink() {
   for (const { link, div } of divs) {
     const divTop = div.offsetTop;
     const divBottom = divTop + div.clientHeight;
-
     if (scrollPosition >= divTop && scrollPosition < divBottom) {
       // Remove "active" class from all links
       anchorLinks.forEach(anchor => anchor.classList.remove('active'));
