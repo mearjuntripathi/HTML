@@ -61,7 +61,7 @@ a {
 
 .nav-link li a {
     color: rgb(106, 103, 103);
-    transition: all 0.2s ease 0.1s;
+    transition: all 0.1s ease 0.1s;
 }
 
 .nav-link li a:hover,
