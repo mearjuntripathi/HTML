@@ -5,6 +5,7 @@ let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
 let imageButton = document.getElementById("createImage");
+let embadedCode = document.getElementById("embadeCode");
 let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
 let formatButtons = document.querySelectorAll(".format");
@@ -116,6 +117,14 @@ imageButton.addEventListener("click", () => {
     }
 });
 
+document.querySelector('#embedVideo').addEventListener('click', () => {
+    let videoCode = prompt('Enter the YouTube video embed code:');
+    if (videoCode !== null) {
+        // You can further validate the videoCode to ensure it's a valid YouTube embed code.
+        insertContentInDiv(videoCode);
+    }
+});
+
 window.addEventListener('keydown', event => {
     if ((event.ctrlKey || event.metaKey) && (event.key === 'b' || event.key === 'B')) {
         event.preventDefault();
@@ -196,6 +205,7 @@ const highlighterRemover = (className) => {
         button.classList.remove("active");
     });
 };
+
 
 
 saveButton.addEventListener("click", () => {
