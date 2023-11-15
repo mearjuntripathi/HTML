@@ -117,11 +117,11 @@ imageButton.addEventListener("click", () => {
     }
 });
 
-document.querySelector('#embedVideo').addEventListener('click', () => {
+embadedCode.addEventListener('click', () => {
     let videoCode = prompt('Enter the YouTube video embed code:');
     if (videoCode !== null) {
         // You can further validate the videoCode to ensure it's a valid YouTube embed code.
-        insertContentInDiv(videoCode);
+        document.execCommand('insertHTML', false, videoCode);
     }
 });
 
