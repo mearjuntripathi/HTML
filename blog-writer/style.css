@@ -32,7 +32,7 @@ button {
     place-items: center;
     border-radius: 3px;
     border: none;
-    background-color: #ffffff;
+    background-color: #caffae;
     outline: none;
     color: #020929;
 }
@@ -52,7 +52,7 @@ button:hover{
 }
 
 .save:hover{
-    box-shadow: 3px 1px 4px 1px rgb(254, 145, 3);
+    box-shadow: 0 0 5px;
 }
 
 .save>div{
