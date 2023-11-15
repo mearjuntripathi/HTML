@@ -210,7 +210,7 @@ const highlighterRemover = (className) => {
 
 saveButton.addEventListener("click", () => {
     // Function to save content as HTML
-    if(confirm(`Do You want to save ${document.getElementById('fileName').value} file`)){
+    if (confirm(`Do You want to save ${document.getElementById('fileName').value} file`)) {
         const content = writingArea.innerHTML; // Get the content from the editor
         const htmlContent = `
         <!DOCTYPE html>
@@ -225,10 +225,10 @@ saveButton.addEventListener("click", () => {
         </body>
         </html>
         `;
-    
+
         // Create a Blob with the HTML content
         const blob = new Blob([htmlContent], { type: "text/html" });
-    
+
         // Create a link to download the Blob as an HTML file
         const url = URL.createObjectURL(blob);
         const a = document.createElement("a");
@@ -246,7 +246,7 @@ openButton.addEventListener("click", () => {
     console.log("hi");
     const fileInput = document.getElementById('fileInput');
     fileInput.click();
-    
+
     fileInput.addEventListener("change", () => {
         const file = fileInput.files[0];
 
@@ -260,12 +260,13 @@ openButton.addEventListener("click", () => {
                 append = true;
             };
             reader.readAsText(file);
-    }});
-  
+        }
+    });
+
 });
 
 
-window.onbeforeunload = function() {
+window.onbeforeunload = function () {
     return "Data will be lost if you leave the page, are you sure?";
 };
 
