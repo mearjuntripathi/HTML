@@ -35,7 +35,7 @@ let dev = [
     { "topic": "Basic Calculator", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/calculator/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/calculator" },
     { "topic": "Image to PDF Converter", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/imagetopdf/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/imagetopdf" },
     { "topic": "To-DO List", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/TO-DO%20list/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/TO-DO%20list" },
-    { "topic": "Tic Tac Toe", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/tiktactoe/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/tiktactoe" },
+    { "topic": "Tic Tac Toe", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/tictactoe/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/tictactoe" },
     { "topic": "Code Editor", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/codeeditor/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/calculator" }
 ];
 
