@@ -89,7 +89,7 @@ body {
     flex-direction: column;
     gap: 25px;
     align-items: center;
-    margin: 200px auto;
+    margin: 100px auto;
 }
 
 .tictactoe {
