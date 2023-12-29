@@ -13,6 +13,7 @@ window.onload = (() => {
 })
 
 let recent = [
+    { "topic": "Tic Tac Toe", "tech": "HTML • CSS • JS", "live": "https://mearjuntripathi.github.io/tictactoe/", "docs": "https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/tictactoe" },
     { "topic": "DSA NOTES", "tech": "C++ • C • JAVA", "live": "", "docs": "https://github.com/mearjuntripathi/Data_Structure_Algorithm?tab=readme-ov-file#data-structure--algorithm" },
     { "topic": "RestAPI", "tech": "nodejs • js", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/crud-RESTAPI" },
     { "topic": "JAVA Digital Clock", "tech": "JAVA", "live": "", "docs": "https://github.com/mearjuntripathi/Java/blob/main/DigitalClock.java" },
@@ -23,7 +24,7 @@ let recent = [
 ];
 
 let dev = [
-    { "topic": "Gapshap (A simple Chatting Website)", "tech": "NodeJS • ExpressJS • SocketIO • HTML • CSS • JS", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/Gapshap" },
+    { "topic": "Gapshap", "tech": "NodeJS • ExpressJS • SocketIO • HTML • CSS • JS", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/Gapshap" },
     { "topic": "Chat Application", "tech": "HTML • CSS • JS • PHP • JQuery • mySQL", "live": "https://greatchatson.000webhostapp.com/", "docs": "https://github.com/mearjuntripathi/PHP/tree/main/chat_on" },
     { "topic": "RestAPI", "tech": "nodejs • js", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/crud-RESTAPI" },
     { "topic": "Chat ROOM", "tech": "JAVA • socket.io", "live": "", "docs": "https://github.com/mearjuntripathi/Java/tree/main/Chat-Room" },
