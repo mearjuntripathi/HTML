@@ -26,11 +26,6 @@ function welcomeSong() {
                     });
             });
         };
-
-        // Add an event listener to a button or any other element
-        document.getElementById('mute').addEventListener('click', playAudio);
-    } else {
-        console.error('AudioContext is not supported in this browser.');
     }
 }
 
