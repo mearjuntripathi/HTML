@@ -5,12 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let audio = new Audio('./assets/tune/welcome.mp3');
 window.onload = () => {
-    startConfetti();
     welcomeSong();
+    startConfetti();
 }
 
-function welcomeSong(){
-    audio.play();
+function welcomeSong() {
+    audio.play()
+        .then(() => {
+            console.log('WelCome sir for play game');
+        })
+        .catch(error => {
+            console.error('Error playing audio:', error);
+        });
 }
 
 let container = document.querySelector('.welcome-container');
