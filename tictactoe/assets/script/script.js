@@ -10,23 +10,13 @@ window.onload = () => {
 }
 
 function welcomeSong() {
-    if (window.AudioContext) {
-        const audioContext = new AudioContext();
-        const audio = new Audio('./assets/tune/welcome.mp3');
-
-        // Function to play the audio
-        const playAudio = () => {
-            audioContext.resume().then(() => {
-                audio.play()
-                    .then(() => {
-                        console.log('Welcome, sir, for playing the game');
-                    })
-                    .catch(error => {
-                        console.error('Error playing audio:', error);
-                    });
-            });
-        };
-    }
+    audio.play()
+        .then(() => {
+            console.log('Welcome, sir, for playing the game');
+        })
+        .catch(error => {
+            console.error('Error playing audio:', error);
+        });
 }
 
 let container = document.querySelector('.welcome-container');
