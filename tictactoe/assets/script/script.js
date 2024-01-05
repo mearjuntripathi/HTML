@@ -12,7 +12,7 @@ window.onload = () => {
 function welcomeSong() {
     if (window.AudioContext) {
         const audioContext = new AudioContext();
-        const audio = new Audio('path/to/your/audio/file.mp3');
+        const audio = new Audio('./assets/tune/welcome.mp3');
 
         // Function to play the audio
         const playAudio = () => {
