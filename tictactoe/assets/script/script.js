@@ -10,13 +10,28 @@ window.onload = () => {
 }
 
 function welcomeSong() {
-    audio.play()
-        .then(() => {
-            console.log('WelCome sir for play game');
-        })
-        .catch(error => {
-            console.error('Error playing audio:', error);
-        });
+    if (window.AudioContext) {
+        const audioContext = new AudioContext();
+        const audio = new Audio('path/to/your/audio/file.mp3');
+
+        // Function to play the audio
+        const playAudio = () => {
+            audioContext.resume().then(() => {
+                audio.play()
+                    .then(() => {
+                        console.log('Welcome, sir, for playing the game');
+                    })
+                    .catch(error => {
+                        console.error('Error playing audio:', error);
+                    });
+            });
+        };
+
+        // Add an event listener to a button or any other element
+        document.getElementById('playButton').addEventListener('click', playAudio);
+    } else {
+        console.error('AudioContext is not supported in this browser.');
+    }
 }
 
 let container = document.querySelector('.welcome-container');
