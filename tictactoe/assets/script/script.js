@@ -3,21 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-let audio = new Audio('./assets/tune/welcome.mp3');
-window.onload = () => {
-    startConfetti();
-    welcomeSong();
-}
 
-function welcomeSong() {
-    audio.play()
-        .then(() => {
-            console.log('WelCome sir for play game');
-        })
-        .catch(error => {
-            console.error('Error playing audio:', error);
-        });
-}
 
 let container = document.querySelector('.welcome-container');
 function startGame(btn) {
@@ -37,19 +23,34 @@ function startGame(btn) {
     container.appendChild(div);
 }
 
-let mute = document.getElementById('mute');
+let audio = new Audio('./assets/tune/welcome.mp3');
+let isAudioPlaying = false;
+
+function welcomeSong() {
+    audio.play();
+    isAudioPlaying = true;
+}
+
 mute.addEventListener('click', () => {
-    if (mute.value == 'play') {
-        welcomeSong()
-        mute.value = "pause";
-        mute.innerHTML = '<i class="fa fa-volume-up"></i>';
+    if (!isAudioPlaying) {
+        welcomeSong();
     }
-    else {
+
+    if (audio.paused) {
+        audio.play();
+        mute.innerHTML = '<i class="fa fa-volume-up"></i>';
+    } else {
         audio.pause();
-        mute.value = "play";
         mute.innerHTML = '<i class="fa fa-volume-mute"></i>';
     }
-})
+});
+
+document.addEventListener('click', () => {
+    if (!isAudioPlaying) {
+        welcomeSong();
+        startConfetti();
+    }
+});
 
 // window.onbeforeunload = function () {
 //     return "Do You want to exit";
