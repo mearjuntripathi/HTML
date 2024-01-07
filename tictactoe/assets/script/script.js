@@ -4,6 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 let audio = new Audio('./assets/tune/welcome.mp3');
+window.onload = () => {
+    startConfetti();
+    welcomeSong();
+}
+
+function welcomeSong() {
+    audio.play()
+        .then(() => {
+            console.log('WelCome sir for play game');
+        })
+        .catch(error => {
+            console.error('Error playing audio:', error);
+        });
+}
 
 let container = document.querySelector('.welcome-container');
 function startGame(btn) {
@@ -24,9 +38,9 @@ function startGame(btn) {
 }
 
 let mute = document.getElementById('mute');
-mute.addEventListener('click', async() => {
+mute.addEventListener('click', () => {
     if (mute.value == 'play') {
-        await audio.play();
+        welcomeSong()
         mute.value = "pause";
         mute.innerHTML = '<i class="fa fa-volume-up"></i>';
     }
@@ -36,14 +50,6 @@ mute.addEventListener('click', async() => {
         mute.innerHTML = '<i class="fa fa-volume-mute"></i>';
     }
 })
-
-
-window.onload = () => {
-    mute.click();
-    
-    startConfetti();
-}
-                    
 
 // window.onbeforeunload = function () {
 //     return "Do You want to exit";

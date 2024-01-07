@@ -27,18 +27,18 @@ class TwoPlayer {
                             setTimeout(()=>{
                                 startConfetti();
                                 this.#hideTictactoe();
-                            },1000);
-                        } else if (winner.win == 'o') { // Fix the condition here
+                            },500);
+                        } else if (winner.win == 'o') { 
                             this.#updateWinningCells(winner.condition, 'losser-cell');
                             message.classList.add('loss');
                             message.textContent = 'O WON';
                             setTimeout(()=>{
-                                looser();
+                                startConfetti();
                                 this.#hideTictactoe();
-                            },1000);
+                            },500);
                         }else {
                             message.textContent = 'Match TIE';
-                            setTimeout(1000,tie());
+                            setTimeout(500,tie());
                         }
                     }
                 }

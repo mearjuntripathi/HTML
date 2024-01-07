@@ -28,7 +28,7 @@ class ComputerGame {
                             setTimeout(() => {
                                 startConfetti();
                                 this.#hideTictactoe();
-                            }, 1000);
+                            }, 300);
                         } else if (winner.win == 'o') { // Fix the condition here
                             this.#updateWinningCells(winner.condition, 'losser-cell');
                             message.classList.add('loss');
@@ -36,15 +36,17 @@ class ComputerGame {
                             setTimeout(() => {
                                 looser();
                                 this.#hideTictactoe();
-                            }, 1000);
+                            }, 300);
                         } else {
                             message.textContent = 'Match TIE';
                             setTimeout(() => {
                                 tie();
-                            }, 1000);
+                            }, 300);
                         }
                     }
-                    this.#computerMode();
+                    setTimeout(() => {
+                        this.#computerMode();
+                    }, 1000);
                 }
             });
         });
