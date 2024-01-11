@@ -24,7 +24,7 @@ let recent = [
 ];
 
 let dev = [
-    { "topic": "Gapshap", "tech": "NodeJS • ExpressJS • SocketIO • HTML • CSS • JS", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/Gapshap" },
+    { "topic": "Gapshap", "tech": "NodeJS • ExpressJS • SocketIO • HTML • CSS • JS", "live": "https://replit.com/@mearjuntripathi/gapshap?v=1", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/Gapshap" },
     { "topic": "Chat Application", "tech": "HTML • CSS • JS • PHP • JQuery • mySQL", "live": "https://greatchatson.000webhostapp.com/", "docs": "https://github.com/mearjuntripathi/PHP/tree/main/chat_on" },
     { "topic": "RestAPI", "tech": "nodejs • js", "live": "", "docs": "https://github.com/mearjuntripathi/nodejs/tree/main/crud-RESTAPI" },
     { "topic": "Chat ROOM", "tech": "JAVA • socket.io", "live": "", "docs": "https://github.com/mearjuntripathi/Java/tree/main/Chat-Room" },
