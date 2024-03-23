@@ -11,13 +11,13 @@ function startGame(btn) {
     let div = document.createElement('div');
     div.classList.add('options');
     let btn1 = document.createElement('button');
-    // let btn2 = document.createElement('button');
+    let btn2 = document.createElement('button');
     let btn3 = document.createElement('button');
     btn1.innerHTML = '<a href="twoPlayer.html">Two Player</a>';
-    // btn2.innerText = 'Online Multiplayer';
+    btn2.innerText = 'https://tic-tac-toe-k2oh.onrender.com/multiplayer';
     btn3.innerHTML = '<a href="computer.html">Play Against Computer</a>';
     div.appendChild(btn1);
-    // div.appendChild(btn2);
+    div.appendChild(btn2);
     div.appendChild(btn3);
     container.removeChild(btn);
     container.appendChild(div);
