@@ -17,7 +17,7 @@ function startGame(btn) {
     btn2.innerText = '<a href="https://tic-tac-toe-k2oh.onrender.com/multiplayer">Online Multiplayer</a>';
     btn3.innerHTML = '<a href="computer.html">Play Against Computer</a>';
     div.appendChild(btn1);
-    // div.appendChild(btn2);
+    div.appendChild(btn2);
     div.appendChild(btn3);
     container.removeChild(btn);
     container.appendChild(div);
