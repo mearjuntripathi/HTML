@@ -1,6 +1,7 @@
 .game-box, .level {
     max-width: 400px;
     padding: 20px;
+    flex: 1;
     background-color: #9de39d;
     color: rgb(10, 9, 9);
     box-shadow: 0 0 10px 0px;
@@ -94,4 +95,19 @@
     color: rgb(189, 8, 8);
     font-weight: bolder;
     font-size: xx-large;
+}
+
+#input{
+    display: flex;
+    max-width: 800px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#input input{
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    border-radius: 10px;
 }

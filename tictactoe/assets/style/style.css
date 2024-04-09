@@ -47,7 +47,7 @@ button {
     border-radius: 5px;
 }
 
-button:hover{
+button:hover {
     background-color: #31a335;
 }
 
@@ -59,7 +59,7 @@ button:hover{
     animation: borderAnimation 1s infinite alternate;
 }
 
-.options{
+.options {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
@@ -88,7 +88,6 @@ button:hover{
 
 .content {
     z-index: 2;
-    /* Set a higher z-index for the content to make sure it's above the confetti */
     padding: 20px;
     text-align: center;
     color: #333;
@@ -101,12 +100,13 @@ button:hover{
     from {
         width: 10px;
     }
+
     to {
         width: 200px;
     }
 }
 
-#mute{
+#mute {
     position: absolute;
     right: 25px;
     bottom: 25px;
@@ -142,8 +142,13 @@ button:hover{
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 body.loaded .loading-overlay {
@@ -154,8 +159,43 @@ body.loaded .content {
     display: block;
 }
 
-
-a{
+a {
     text-decoration: none;
-    color:white;
+    color: white;
+}
+
+.battle {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+} 
+
+.p1, .p2 {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30% 10%;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.p1 {
+    background-color: red;
+    transform: translateX(-100%);
+}
+
+.p2 {
+    background-color: green;
+    transform: translateX(100%);
+}
+
+.battle.show {
+    opacity: 1;
+}
+
+.p1.show, .p2.show {
+    opacity: 1;
+    transform: translateX(0);
 }
