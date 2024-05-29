@@ -21,7 +21,7 @@ class MultiPlayer {
         this.mode = move ? 'x' : 'o';
         this.opponent.id = id;
         this.opponent.name = opponent;
-        let start = new Audio('./tune/begin.mp3');
+        let start = new Audio('../tune/begin.mp3');
         start.play();
         this.panel.innerHTML = "";
         
