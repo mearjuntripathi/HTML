@@ -2,312 +2,1281 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arjun Tripathi</title>
-    <link rel="icon" href="./image/arjun.png">
-    <!-- It is a Awasome Font Link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="index.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arjun Tripathi</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/my-avatar.png" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
-<body class="dark">
-    <header>
-        <h1 onclick="location.href=''">ARJUN TRIPATHI</h1>
-        <nav>
-            <button class="bars"><img src="image/arjun.png"></button>
-            <ul class="nav-link" id="nav">
-                <li><a class="active" href="#about">About</a></li>
-                <li><a href="#experience">Experiance</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#education">Education</a></li>
+<body>
+
+  <!-- notification -->
+  <div id="success-message" class="alert success">Form submitted successfully!</div>
+  <div id="error-message" class="alert error"></div>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+    <button id="toggle-theme">☀</button>
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Arjun Tripathi</h1>
+
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span style="font-weight: bolder;">Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a target="_blank" href="mailto:mearjuntripathi@gmail.com"
+                class="contact-link">mearjuntripathi@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a target="_blank" href="tel:+918887135297" class="contact-link">+91 8887135297</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">April 15, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Varanasi, U.P., India</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a target="_blank" href="https://github.com/mearjuntripathi" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a target="_blank" href="https://x.com/mearjuntriipathi" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a target="_blank" href="https://www.linkedin.com/in/mearjuntripathi/" class="social-link">
+              <ion-icon name="logo-linkedIn"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a target="_blank" href="https://g.dev/mearjuntripathi" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am Arjun Tripathi, a passionate and skilled Software Engineer with a strong academic background and
+            diverse technical expertise. I hold a Master's degree in Computer Application from Dr. A. P. J. Abdul Kalam
+            Technical University and a Bachelor's degree in Computer Application from Mahatma Gandhi Kashi Vidyapith
+            University. My professional journey includes an internship at Rhizicube, where I developed production-ready
+            APIs using <b>GO</b>, <b>NodeJS</b>, <b>REST API</b>, and <b>gRPC</b>. I am proficient in various
+            programming languages and
+            frameworks, including <b>C</b>, <b>C++</b>, <b>JAVA</b>, <b>PHP</b>, <b>HTML/CSS</b>, <b>JavaScript</b>,
+            <b>ReactJS</b>, and <b>ExpressJS</b>.
+          </p>
+          <p>
+            I have demonstrated my technical capabilities through several significant projects, such as developing a
+            company portfolio website and an online test portal. I have also created a real-time <b>Tic Tac Toe game</b>
+            and a
+            <b>REST API</b> using <b>Go Lang</b> and <b>Docker</b>. My problem-solving skills are evident from my
+            achievements on competitive
+            coding platforms like <b>CodeChef</b>, <b>LeetCode</b>, and <b>HackerRank</b>. With my strong technical
+            foundation and hands-on
+            experience, I am well-equipped to tackle complex software engineering challenges.
+          </p>
+
+          <a href="https://drive.google.com/file/d/1jlfauLNdYwaMbr0ACpIi7Oja-qyt2fGw/view?usp=sharing" target="_blank"
+            class="download-resume"><svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg> Download Resume</a>
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Programming</h4>
+
+                <p class="service-item-text">
+                  I'm as good as in Programming to problem solving and code <b>DSA</b>, and <b>System Design</b>.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-api.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">APIs</h4>
+
+                <p class="service-item-text">
+                  Good to develop in API for backend projects with <b>GOlang</b>, <b>Node JS</b>.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-cloud.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cloud Computing</h4>
+
+                <p class="service-item-text">
+                  I am capable to work in cloud Computing technology using <b>AWS</b>, <b>Azure</b>.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Dinesh Rana" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dinesh Rana</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Dinesh was hired to create a His company portfolio. We were very pleased with the work done. he has
+                    a
+                    lot of experience
+                    and is very concerned about the needs of client. We create is whole portfolio and it admin panel
+                    with great design and fnctionality he is so happly with our work.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Udit Sarin" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Udit Sarin</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Rhizizcube a place wher i work as a <b>Software Engineer Intern</b> where i done a various things
+                    realated <b> Creating APIs</b>, and <b>Tesing APIs</b> team management.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Dinesh Rana" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title></h4>
+
+              <!-- <time datetime="2021-06-14"></time> -->
+
+              <div data-modal-text>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+
+
+        <!--
+          - clients
+        -->
+
+        <!-- <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li> -->
+
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
+
+              <span>July 2022 — Nov 2022</span>
+
+              <p class="timeline-text">
+                I learn allot with this company and understand team work, every employee help me when i face problem and
+                I understand how to test APIs and and to attend meetings and understand working process of productions.
+                I enhanced my communication skills there, and knowledge skill. I learn allot with this company and
+                understand team work, every employee help me when i face problem and I under stand how to test APIs and
+                and to attend meetings and understand working process of productions. I enhanced my communication skills
+                there, and knowledge skill.
+                <br>
+                <b>Skills</b>: GitHub · Go (Programming Language) · postman · JSON · gRPC · Git · Communication ·
+                Problem
+                Solving · Zapier · MySQL · Gitlab · REST APIs
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Dr. A.P.J. Abdul Kalam Technical University</h4>
+
+              <span>2022 — 2024</span>
+
+              <p class="timeline-text">
+                Master Of Computer Application
+                <br>
+                <b>8.3 CGPA</b>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Mahatma Gandhi Kashi Vidhyapeeth</h4>
+
+              <span>2019 — 2022</span>
+
+              <p class="timeline-text">
+                Bachelor of Computer Application
+                <br>
+                <b>73 %</b>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Programming Languages</h5>
+              </div>
+
+              <div class="skill-progress-bg">
+                <span class="skills">C++</span>
+                <span class="skills">C</span>
+                <span class="skills">JAVA</span>
+                <span class="skills">JavaScript</span>
+                <span class="skills">PHP</span>
+                <span class="skills">GO</span>
+                <span class="skills">HTML/CSS</span>
+                <span class="skills">Node JS</span>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Library / Frameworks</h5>
+              </div>
+
+              <div class="skill-progress-bg">
+                <span class="skills">ReactJS</span>
+                <span class="skills">ExpressJS</span>
+                <span class="skills">Rest API</span>
+                <span class="skills">gRPC</span>
+                <span class="skills">Socket.io</span>
+                <span class="skills">WebSocket</span>
+                <span class="skills">Docker</span>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Tools / Plateform</h5>
+              </div>
+
+              <div class="skill-progress-bg">
+                <span class="skills">Postman</span>
+                <span class="skills">VS Code</span>
+                <span class="skills">PHPmyAdmin</span>
+                <span class="skills">Netbeans</span>
+                <span class="skills">Xampp</span>
+                <span class="skills">AWS</span>
+                <span class="skills">Linux</span>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Databases</h5>
+              </div>
+
+              <div class="skill-progress-bg">
+                <span class="skills">MySQL</span>
+                <span class="skills">MongoDB</span>
+                <span class="skills">Oracle</span>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>APIs</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Programming</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>APIs</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Programming</button>
+              </li>
+
             </ul>
-        </nav>
-    </header>
-    <div class="container">
-        <!-- About Section -->
-        <div id="about" class="about section">
-            <div class="hello">
-                <div>
-                    <p>Hello 👋, I'm</p>
-                    <h1>Arjun Tripathi</h1>
-                    <div id="message">
-                        <p></p>
-                    </div>
-                </div>
-                <div class="profile-pic">
-                    <img src="./image/arjun.png" alt="">
-                </div>
-            </div>
-            <div class="connect">
-                <button id="connect">Connect With Me</button>
-                <button
-                    onclick="window.open('https://drive.google.com/file/d/1Mv5DWDf4irEpPzR6Vx0G7YGRvy8spXaw/view?usp=drive_link', '_blank')">View
-                    Resume</button>
 
-                <div class="social hide">
-                    <a href="mailto:mearjuntripathi@gmail.com" target="_blank"><img style="width:40px;"
-                            src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png"
-                            alt=""></a>
-                    <a href="tel:+918887135297" target="_blank"><i class="fa fa-mobile fa-3x"
-                            style="color: rgb(0, 0, 0);"></i></a>
-                    <a href="https://linkedin.com/in/mearjuntripathi" target="_blank"><i class="fa fa-linkedin fa-2x"
-                            style="color: blue;"></i></a>
-                    <a href="https://github.com/mearjuntripathi" target="_blank"><i class="fa fa-github fa-3x"
-                            style="color: black;"></i></a>
-                    <a href="https://x.com/mearjuntripathi" target="_blank"><img
-                            src="https://pbs.twimg.com/profile_images/1683899100922511378/5lY42eHs_400x400.jpg"
-                            style="width: 40px; border-radius: 50%;" alt=""></a>
-                    <a href="https://instagram.com/mearjuntripathi" target="_blank"><i class="fa fa-instagram fa-3x"
-                            style="color: rgb(234, 17, 17);"></i></a>
-                    <a href="https://leetcode.com/mearjuntripathi" target="_blank"><img style="width:40px;"
-                            src="https://leetcode.com/_next/static/images/logo-dark-c96c407d175e36c81e236fcfdd682a0b.png"
-                            alt="leetcode"></a>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div id="experience" class="experience section">
-            <div class="heading">
-                <h1>Experience</h1>
-            </div>
-            <div class="experiences">
-                <div class="ecard">
-                    <div class="company-name">
-                        <img src="./image/rhizicube.png"
-                            style="width: 30px; height: 30px; border-radius: 5px 0px 0px 5px;" alt="rhizicube">
-                        <h2>Rhizicube</h2>
-                    </div>
-                    <hr>
-                    <div class="title-name">
-                        <p>SOFTWARE ENGINEER INTERN</p>
-                        <span>Jul-2022 - Nov-2022</span>
-                    </div>
-                    <div class="used-technology">
-                        <h4><u>Learn Technology</u></h4>
-                        <p>GOlang • gRPC • RESTAPIs • Zapier • Postman • JSON • JS </p>
-                    </div>
-                    <div class="quote">
-                        "Collaborated with cross-functional teams to create APIs for NETCORE and Zapier integration.
-                        Proficient in API testing using POSTMAN, Thunder Client, and curl. Developed production-ready
-                        APIs using GO, JavaScript, REST API, and gRPC. Enhanced soft skills by engaging with senior
-                        colleagues and HR."
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div id="project" class="project section">
-            <div class="heading">
-                <h1>MY PROJECTS</h1>
-            </div>
-            <div class="projects">
-                <!-- chat bot -->
-                <div class="pcard">
-                    <div class="img-section">
-                        <img style="width: 100px;" src="./image/chatbot.gif" alt="">
-                    </div>
-                    <div class="info-section">
-                        <h3>Chat BOT</h3>
-                        <h5>Used Technology: <span>HTML • CSS • JS • OPENAI</span></h5>
-                        <p>Code for a responsive and user-friendly chatbot website, created using HTML, CSS, and
-                            JavaScript, and requiring an OpenAI API key for functionality.</p>
-                        <div class="view">
-                            <a target="_blank" href="https://mearjuntripathi.github.io/chatbot/" class="live"><i
-                                    class="fa fa-eye"> Live website</i></a>
-                            <a target="_blank"
-                                href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/chatbot#chatbot-website-readme"
-                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
-                        </div>
-                    </div>
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://replit.com/@mearjuntripathi/gapshap?v=1" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.png" alt="Gapshap" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Gapshap</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://greatchatson.000webhostapp.com/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="Chat On" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Chat ON</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/chatbot/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.png" alt="ChatBot" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ChatBot</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/dora/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="DORA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DORA</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/stranger/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="Stranger" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Stranger</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/calculator/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="Calculator" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Calculator</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/imagetopdf/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="ImagetoPDF" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">ImagetoPDF</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/TO-DO%20list/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.png" alt="To-Do list" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">To-Do list</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/tictactoe/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="TicTacToe" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tic Tac Toe</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://mearjuntripathi.github.io/codeeditor/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-10.png" alt="Code Editor" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Code Editor</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="programming">
+              <a href="https://github.com/mearjuntripathi/Data_Structure_Algorithm" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-11.png" alt="DSA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSA</h3>
+
+                <p class="project-category">Programming</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="programming">
+              <a href="https://github.com/mearjuntripathi/Java/tree/main/Chat-Room" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-12.png" alt="Chat Romm" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Chat Room</h3>
+
+                <p class="project-category">Programming</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="apis">
+              <a href="https://github.com/mearjuntripathi/nodejs/tree/main/crud-RESTAPI" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-13.png" alt="Rest API" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Rest API</h3>
+
+                <p class="project-category">APIs</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://explorer-app.github.io/testhub/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-14.png" alt="Testhub" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Testhub</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="apis">
+              <a href="https://github.com/mearjuntripathi/book-management-api/" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-15.png" alt="Book Management API" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Book Management API</h3>
+
+                <p class="project-category">APIs</p>
+
+              </a>
+            </li>
+
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!-- <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                  <p class="blog-text">
+                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                  </p>
+
                 </div>
 
-                <!-- chat-on -->
-                <div class="pcard">
-                    <div class="img-section">
-                        <img style="width: 100px;" src="./image/chaton.gif" alt="">
-                    </div>
-                    <div class="info-section">
-                        <h3>ChatON</h3>
-                        <h5>Used Technology: <span>HTML • CSS • JS • PHP • mySQL • JQuery • Scale Drone</span></h5>
-                        <p>A simple PHP-based chat application that allows users to communicate in real-time, with
-                            video-call facility.</p>
-                        <div class="view">
-                            <a target="_blank" href="https://greatchatson.000webhostapp.com/" class="live"><i
-                                    class="fa fa-eye"> Live website</i></a>
-                            <a target="_blank"
-                                href="https://github.com/mearjuntripathi/PHP/tree/main/chat_on#chat-application"
-                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
-                        </div>
-                    </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                  <p class="blog-text">
+                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                  </p>
+
                 </div>
 
-                <!-- gapshap a chatting website -->
+              </a>
+            </li>
 
-                <div class="pcard">
-                    <div class="img-section">
-                        <img style="width: 100px;" src="./image/gapshap.png" alt="">
-                    </div>
-                    <div class="info-section">
-                        <h3>Gapshap</h3>
-                        <h5>Used Technology: <span>NodeJS • ExpressJS • SocketIO • HTML • CSS • JS </span></h5>
-                        <p>This is a simple chat application using Node.js, Express, and Socket.IO. The application
-                            allows users to join a chat room, send messages to all users, and send private messages to
-                            specific users with beautiful and responsive design.</p>
-                        <div class="view">
-                            <a target="_blank" href="https://replit.com/@mearjuntripathi/gapshap?v=1" class="live"><i
-                                    class="fa fa-eye"> Live website</i></a>
-                            <a target="_blank" href="https://github.com/mearjuntripathi/nodejs/tree/main/Gapshap"
-                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
-                        </div>
-                    </div>
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                  <p class="blog-text">
+                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                  </p>
+
                 </div>
 
-                <!-- Blog-website -->
-                <div class="pcard">
-                    <div class="img-section">
-                        <img style="width: 100px;" src="./image/blog-writter.png" alt="">
-                    </div>
-                    <div class="info-section">
-                        <h3>Blog Writter</h3>
-                        <h5>Used Technology: <span>HTML • CSS • JS </span></h5>
-                        <p>This is a web-based rich text editor that allows users to create and edit text with various
-                            formatting options, including bold, italic, underline, and more. It also provides features
-                            for adding links, images, and adjusting text alignment. Users can save and open their text
-                            content as HTML files.</p>
-                        <div class="view">
-                            <a target="_blank" href="https://mearjuntripathi.github.io/blog-writer/" class="live"><i
-                                    class="fa fa-eye"> Live website</i></a>
-                            <a target="_blank"
-                                href="https://github.com/mearjuntripathi/mearjuntripathi.github.io/tree/main/blog-writer#rich-text-editor"
-                                class="documentation"><i class="fa fa-file"> Documentation</i></a>
-                        </div>
-                    </div>
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                  <p class="blog-text">
+                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                  </p>
+
                 </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                  <p class="blog-text">
+                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Design</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                  <p class="blog-text">
+                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.2250006075787!2d82.96312178629285!3d25.37405984647004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2d8f9bf724f7%3A0x6b76bd13928cdc4!2sParmanandpur%20vidyabhushan%20Tripathi%20home!5e0!3m2!1sen!2sin!4v1720166522712!5m2!1sen!2sin"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form method="post" class="form" id="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="Name" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="Email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
-            <!-- read more -->
-            <div class="load-more">
-                <a href="projects.html">View All Projects >> </a>
-            </div>
-        </div>
 
-        <hr>
-        <!-- skill section -->
-        <div id="skill" class="skill section">
-            <div class="heading">
-                <h1>SKILL</h1>
-            </div>
-            <div class="skills">
-                <div class="scard">
-                    <div class="topic">
-                        <i class="fa fa-code"></i>
-                        <h2>Programming Language</h2>
-                    </div>
-                    <hr>
-                    <div class="languages">
-                        <img src="./image/c.svg" style="width: 50px;" alt="C language" />
-                        <img src="./image/cpp.svg" style="width: 50px;" alt="CPP language" />
-                        <img src="./image/java.svg" style="width: 50px;" alt="JAVA language" />
-                        <img src="./image/golang.svg" style="width: 100px;" alt="golang" />
-                        <img src="./image/js.svg" style="width: 50px;" alt="" />
-                    </div>
-                </div>
+            <textarea name="Message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" id="submit" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
 
-                <div class="scard">
-                    <div class="topic">
-                        <img src="./image/dev.svg"
-                            style="width: 35px; background-color: rgb(55, 139, 255); padding: 2px; border-radius: 5px 0px 0px 5px;">
-                        <h2>Web Development</h2>
-                    </div>
-                    <hr>
-                    <div class="languages">
-                        <img src="./image/html.svg" style="width: 50px;" alt="HTML language" />
-                        <img src="./image/css.svg" style="width: 50px;" alt="CSS language" />
-                        <img src="./image/js.svg" style="width: 50px;" alt="JS language" />
-                        <img src="./image/golang.svg" style="width: 100px;" alt="golang" />
-                        <img src="./image/nodejs.svg" style="width: 50px;" alt="nodejs" />
-                        <img src="./image/php.svg" style="width: 60px;" alt="nodejs" />
-                    </div>
-                </div>
+          </form>
 
-                <div class="scard">
-                    <div class="topic">
-                        <i class="fa fa-database"></i>
-                        <h2>Database</h2>
-                    </div>
-                    <hr>
-                    <div class="languages">
-                        <img src="./image/mysql.svg" width="120px" alt="mysql" />
-                        <img src="./image/mongodb.svg" width="180px" alt="mongodb" />
-                    </div>
-                </div>
 
-                <div class="scard">
-                    <div class="topic">
-                        <i class="fa fa-cog"></i>
-                        <h2>Other</h2>
-                    </div>
-                    <hr>
-                    <div class="languages">
-                        <img src="./image/linux.svg" width="60px" alt="linux" />
-                        <img src="./image/visual-studio.svg" width="50px" alt="vscode" />
-                        <img src="./image/github-icon.svg"
-                            style="width: 50px; background-color: white; border-radius: 50%;" alt="vscode" />
-                        <img src="./image/postman.svg" width="50px" alt="postman" />
-                        <img src="./image/xampp.svg" width="50px" alt="postman" />
-                        <img src="./image/apache-netbeans.png" width="50px" alt="postman" />
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <div id="education" class="education section">
-            <div class="heading">
-                <h1>Education</h1>
-            </div>
-            <div class="degrees">
-                <!-- mca -->
-                <div class="degree">
-                    <div class="degree-info">
-                        <h2><span class="highlight">M</span>aster of <span class="highlight">C</span>omputer <span
-                                class="highlight">A</span>pplication</h2>
-                    </div>
-                    <hr>
-                    <div class="title-name">
-                        <p style="background-color: rgb(216, 119, 0);">Dr. A. P. J. Abdul Kalam Technical University</p>
-                        <span>Nov-2022 - PRESENT</span>
-                    </div>
-                    <div class="used-technology">
-                        <h4><u>Learn Technology</u></h4>
-                        <p>JAVA • mySQL • Web Development • nodejs • DSA</p>
-                    </div>
-                </div>
+        </section>
 
-                <!-- bca -->
-                <div class="degree">
-                    <div class="degree-info">
-                        <h2><span class="highlight">B</span>achelor of <span class="highlight">C</span>omputer <span
-                                class="highlight">A</span>pplication</h2>
-                    </div>
-                    <hr>
-                    <div class="title-name">
-                        <p style="background-color: rgb(216, 119, 0);">Mahatma Gandhi Kashi Vidyapith University</p>
-                        <span>Jul-2019 - Nov-2022</span>
-                    </div>
-                    <div class="used-technology">
-                        <h4><u>Learn Technology</u></h4>
-                        <p>C language • C++ Language • Web Development • PHP • OOPs</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      </article>
+
     </div>
-    <button id="mode">
-        <i class="fa fa-sun-o fa-2x" style="color: yellow;"></i>
-    </button>
-    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 
 </html>
