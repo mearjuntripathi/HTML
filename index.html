@@ -1,9 +1,86 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://mearjuntripathi.vercel.app">
-  </head>
-  <body>
-    <p>If you are not redirected, <a href="https://mearjuntripathi.vercel.app">click here</a>.</p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="5; url=https://mearjuntripathi.vercel.app">
+    <title>We're Moving to Vercel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 1.5em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #0070f3;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        a:hover {
+            background-color: #005bb5;
+        }
+
+        .countdown {
+            font-weight: bold;
+            color: #0070f3;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>We're Moving to Vercel!</h1>
+        <p>We’ve moved our deployment to Vercel for a better and faster React experience.</p>
+        <p>You’ll be automatically redirected in <span class="countdown">5</span> seconds.</p>
+        <p>If you’re not redirected, <a href="https://mearjuntripathi.vercel.app">click here</a>.</p>
+    </div>
+
+    <script>
+        // Countdown timer for the redirect
+        let countdownElement = document.querySelector('.countdown');
+        let countdown = 5;
+
+        const interval = setInterval(() => {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(interval);
+            }
+        }, 1000);
+    </script>
+</body>
 </html>
