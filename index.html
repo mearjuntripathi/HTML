@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=https://mearjuntripathi.vercel.app">
+    <meta http-equiv="refresh" content="0; url=https://mearjuntripathi.vercel.app">
     <title>We're Moving to Vercel</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
@@ -60,27 +61,13 @@
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>We're Moving to Vercel!</h1>
         <p>We’ve moved our deployment to Vercel for a better and faster React experience.</p>
-        <p>You’ll be automatically redirected in <span class="countdown">5</span> seconds.</p>
         <p>If you’re not redirected, <a href="https://mearjuntripathi.vercel.app">click here</a>.</p>
     </div>
-
-    <script>
-        // Countdown timer for the redirect
-        let countdownElement = document.querySelector('.countdown');
-        let countdown = 5;
-
-        const interval = setInterval(() => {
-            countdown--;
-            countdownElement.textContent = countdown;
-
-            if (countdown === 0) {
-                clearInterval(interval);
-            }
-        }, 1000);
-    </script>
 </body>
+
 </html>
