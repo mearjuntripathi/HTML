@@ -4,7 +4,7 @@ let fontName = document.getElementById("fontName");
 let fontSizeRef = document.getElementById("fontSize");
 let writingArea = document.getElementById("text-input");
 let linkButton = document.getElementById("createLink");
-let imageButton = document.getElementById("createImage");
+// let imageButton = document.getElementById("createImage");
 let embadedCode = document.getElementById("embadeCode");
 let alignButtons = document.querySelectorAll(".align");
 let spacingButtons = document.querySelectorAll(".spacing");
@@ -38,6 +38,7 @@ let fontList = [
     "Raleway", // Bold
     "Open Sans", // Bold
 ];
+
 
 //Initial Settings
 const initializer = () => {
@@ -97,23 +98,6 @@ linkButton.addEventListener("click", () => {
     } else {
         userLink = "http://" + userLink;
         modifyText(linkButton.id, false, userLink);
-    }
-});
-
-imageButton.addEventListener("click", () => {
-    let alt = prompt('Please enter image alt text:');
-    if (alt !== null) {
-        let url = prompt('Please enter image URL:');
-        if (url !== null) {
-            let width = prompt('Enter image width:', 'auto');
-            if (width !== null) {
-                let imgTag = '<img src="' + (url.length > 0 ? url : '') + '"' +
-                    (width !== 'auto' ? ' width="' + width + '"' : '') +
-                    (alt.length > 0 ? ' alt="' + alt + '"' : '') +
-                    '>';
-                document.execCommand('insertHTML', false, imgTag);
-            }
-        }
     }
 });
 
@@ -265,16 +249,23 @@ openButton.addEventListener("click", () => {
 
 });
 
-
-window.onbeforeunload = function () {
-    return "Data will be lost if you leave the page, are you sure?";
-};
+document.getElementById("text-input").addEventListener("paste", async (event) => {
+    let items = (event.clipboardData || event.originalEvent.clipboardData).items;
+    for (let item of items) {
+        if (item.type.indexOf("image") === 0) {
+            event.preventDefault();
+            let blob = item.getAsFile();
+            let reader = new FileReader();
+            reader.onload = function (event) {
+                let img = new Image();
+                img.src = event.target.result;
+                img.style.maxWidth = "300px"; // Reduce image size
+                img.style.height = "auto";
+                document.getElementById("text-input").appendChild(img);
+            };
+            reader.readAsDataURL(blob);
+        }
+    }
+});
 
 window.onload = initializer;
-
-console.log(`   _____                  __                   ___________          .__                      __    .__      .__ 
-  /  _  \\   _______      |__|  __ __    ____   \\__    ___/ _______  |__| ______   _____    _/  |_  |  |__   |__|
- /  /_\\  \\  \\_  __ \\     |  | |  |  \\  /    \\    |    |    \\_  __ \\ |  | \\____ \\  \\__  \\   \\   __\\ |  |  \\  |  |
-/    |    \\  |  | \\/     |  | |  |  / |   |  \\   |    |     |  | \\/ |  | |  |_> >  / __ \\_  |  |   |   Y  \\ |  |
-\\____|__  /  |__|    /\\__|  | |____/  |___|  /   |____|     |__|    |__| |   __/  (____  /  |__|   |___|  / |__|
-        \\/           \\______|              \\/                            |__|          \\/               \\/      `);
